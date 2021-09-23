@@ -1,7 +1,7 @@
 #include "../include/Binance_Client.h"
 
 Json::CharReaderBuilder _J_BUILDER;
-Json::CharReader* _J_READER = _J_BUILDER.newCharReader();
+//Json::CharReader* _J_READER = _J_BUILDER.newCharReader();
 static long _IDLE_TIME_TCP = 120L;
 static long _INTVL_TIME_TCP = 60L;
 
@@ -15,19 +15,17 @@ static long _INTVL_TIME_TCP = 60L;
 */
 unsigned int _REQ_CALLBACK(void* contents, unsigned int size, unsigned int nmemb, RestSession::RequestHandler* req) 
 {
-	std::unique_lock<std::mutex> req_lock(req->session->_get_lock); // will be unlocked in callback
-	req->locker = &req_lock;
-
 	(&req->req_raw)->append((char*)contents, size * nmemb);
-	//req->locker->unlock();
 
 	std::string parse_errors{};
 	bool parse_status;
 
+	Json::CharReader* _J_READER = _J_BUILDER.newCharReader();
+
 	parse_status = _J_READER->parse(req->req_raw.c_str(),
 		req->req_raw.c_str() + req->req_raw.size(),
 		&req->req_json["response"],
-		&parse_errors);
+		&parse_errors);	
 
 	if (req->req_status != CURLE_OK || req->req_status == CURLE_HTTP_RETURNED_ERROR)
 	{
@@ -47,7 +45,6 @@ unsigned int _REQ_CALLBACK(void* contents, unsigned int size, unsigned int nmemb
 		return 0;
 	}
 	req->req_json["request_status"] = 1;
-	req->locker->unlock();
 	return 1;
 };
 
