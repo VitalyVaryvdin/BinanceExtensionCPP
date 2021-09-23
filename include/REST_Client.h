@@ -12,6 +12,7 @@ private:
 		Json::Value req_json;
 		CURLcode req_status;
 		std::unique_lock<std::mutex>* locker;
+		RestSession* session;
 	};
 
 
