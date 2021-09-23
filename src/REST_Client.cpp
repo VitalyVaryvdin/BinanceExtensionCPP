@@ -15,8 +15,11 @@ static long _INTVL_TIME_TCP = 60L;
 */
 unsigned int _REQ_CALLBACK(void* contents, unsigned int size, unsigned int nmemb, RestSession::RequestHandler* req) 
 {
+	std::unique_lock<std::mutex> req_lock(req->session->_get_lock); // will be unlocked in callback
+	req->locker = &req_lock;
+
 	(&req->req_raw)->append((char*)contents, size * nmemb);
-	req->locker->unlock();
+	//req->locker->unlock();
 
 	std::string parse_errors{};
 	bool parse_status;
@@ -44,6 +47,7 @@ unsigned int _REQ_CALLBACK(void* contents, unsigned int size, unsigned int nmemb
 		return 0;
 	}
 	req->req_json["request_status"] = 1;
+	req->locker->unlock();
 	return 1;
 };
 
@@ -114,15 +118,22 @@ Json::Value RestSession::_getreq(std::string full_path)
 	try
 	{
 		RequestHandler request{};
+		request.session = this;
 
-		std::unique_lock<std::mutex> req_lock(this->_get_lock); // will be unlocked in callback
-		request.locker = &req_lock;
+		CURL* curl;
+		curl = curl_easy_init();
 
-		curl_easy_setopt(this->_get_handle, CURLOPT_URL, full_path.c_str());
-		curl_easy_setopt(this->_get_handle, CURLOPT_WRITEDATA, &request);
+		curl_easy_setopt(curl, CURLOPT_HTTPGET, 1L);
+		curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1L);
+		curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, _REQ_CALLBACK);
+		curl_easy_setopt(curl, CURLOPT_FAILONERROR, 0); 
 
-		request.req_status = curl_easy_perform(this->_get_handle);
+		curl_easy_setopt(curl, CURLOPT_URL, full_path.c_str());
+		curl_easy_setopt(curl, CURLOPT_WRITEDATA, &request);
 
+		request.req_status = curl_easy_perform(curl);
+		
+		curl_easy_cleanup(curl);
 
 		return request.req_json;
 	}
