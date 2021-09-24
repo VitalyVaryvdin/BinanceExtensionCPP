@@ -14,6 +14,11 @@
 #include <openssl/hmac.h>
 #include <openssl/sha.h>
 
+#include <simdjson.h>
+#include <simdjson/dom/array.h>
+#include <simdjson/dom/element.h>
+#include <simdjson/error.h>
+
 // STL
 #include <chrono>
 #include <string>

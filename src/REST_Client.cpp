@@ -1,5 +1,7 @@
 #include "../include/Binance_Client.h"
 
+#include <iostream>
+
 Json::CharReaderBuilder _J_BUILDER;
 //Json::CharReader* _J_READER = _J_BUILDER.newCharReader();
 static long _IDLE_TIME_TCP = 120L;
@@ -17,10 +19,19 @@ unsigned int _REQ_CALLBACK(void* contents, unsigned int size, unsigned int nmemb
 {
 	(&req->req_raw)->append((char*)contents, size * nmemb);
 
-	std::string parse_errors{};
+	return size * nmemb;
+
+	/*std::string parse_errors{};
 	bool parse_status;
 
 	Json::CharReader* _J_READER = _J_BUILDER.newCharReader();
+
+	simdjson::dom::parser parser;
+	simdjson::dom::element element;
+
+	auto error = parser.parse(req->req_raw).get(element);
+	if (error) std::cerr << error << std::endl;
+	std::cout << "Type: " << element.type();
 
 	parse_status = _J_READER->parse(req->req_raw.c_str(),
 		req->req_raw.c_str() + req->req_raw.size(),
@@ -44,8 +55,10 @@ unsigned int _REQ_CALLBACK(void* contents, unsigned int size, unsigned int nmemb
 	{
 		return 0;
 	}
+
 	req->req_json["request_status"] = 1;
-	return 1;
+
+	return size*nmemb;*/
 };
 
 /**
@@ -123,7 +136,7 @@ Json::Value RestSession::_getreq(std::string full_path)
 		curl_easy_setopt(curl, CURLOPT_HTTPGET, 1L);
 		curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1L);
 		curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, _REQ_CALLBACK);
-		curl_easy_setopt(curl, CURLOPT_FAILONERROR, 0); 
+		curl_easy_setopt(curl, CURLOPT_FAILONERROR, 0);
 
 		curl_easy_setopt(curl, CURLOPT_URL, full_path.c_str());
 		curl_easy_setopt(curl, CURLOPT_WRITEDATA, &request);
@@ -132,7 +145,39 @@ Json::Value RestSession::_getreq(std::string full_path)
 		
 		curl_easy_cleanup(curl);
 
+		Json::CharReader* _J_READER = _J_BUILDER.newCharReader();
+
+		std::string parse_errors{};		
+		bool parse_status = _J_READER->parse(request.req_raw.c_str(),
+										request.req_raw.c_str() + request.req_raw.size(),
+										&request.req_json["response"],
+										&parse_errors);	
+
+		/*simdjson::dom::parser parser;
+		simdjson::dom::element element;
+		auto error = parser.parse(request.req_raw).get(element);
+		if(error) { std::cerr << error << std::endl; }*/
+
+		if (request.req_status != CURLE_OK || request.req_status == CURLE_HTTP_RETURNED_ERROR)
+		{
+			request.req_json["response"] = request.req_raw;
+		}
+		else if (!parse_status)
+		{
+			request.req_json["parse_status"] = parse_errors;
+		}
+
+		request.req_json["request_status"] = 1;
+
 		return request.req_json;
+	}
+	catch(const std::runtime_error& re)
+	{
+		std::cerr << std::string(__FUNCTION__) << " " << "Runtime error: " << re.what() << std::endl;
+	}
+	catch(const std::exception& ex)
+	{
+		std::cerr << std::string(__FUNCTION__) << " " << "Error occurred: " << ex.what() << std::endl;
 	}
 	catch (...)
 	{
