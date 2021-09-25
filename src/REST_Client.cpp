@@ -1,9 +1,7 @@
 #include "../include/Binance_Client.h"
 
-#include <iostream>
-
 Json::CharReaderBuilder _J_BUILDER;
-//Json::CharReader* _J_READER = _J_BUILDER.newCharReader();
+
 static long _IDLE_TIME_TCP = 120L;
 static long _INTVL_TIME_TCP = 60L;
 
@@ -20,45 +18,6 @@ unsigned int _REQ_CALLBACK(void* contents, unsigned int size, unsigned int nmemb
 	(&req->req_raw)->append((char*)contents, size * nmemb);
 
 	return size * nmemb;
-
-	/*std::string parse_errors{};
-	bool parse_status;
-
-	Json::CharReader* _J_READER = _J_BUILDER.newCharReader();
-
-	simdjson::dom::parser parser;
-	simdjson::dom::element element;
-
-	auto error = parser.parse(req->req_raw).get(element);
-	if (error) std::cerr << error << std::endl;
-	std::cout << "Type: " << element.type();
-
-	parse_status = _J_READER->parse(req->req_raw.c_str(),
-		req->req_raw.c_str() + req->req_raw.size(),
-		&req->req_json["response"],
-		&parse_errors);	
-
-	if (req->req_status != CURLE_OK || req->req_status == CURLE_HTTP_RETURNED_ERROR)
-	{
-		req->req_json["response"] = req->req_raw;
-
-		return 0;
-	}
-
-	else if (!parse_status)
-	{
-		req->req_json["parse_status"] = parse_errors;
-		return 0;
-	}
-
-	else if (req->req_json.isMember("code") && req->req_json["code"] != 200)
-	{
-		return 0;
-	}
-
-	req->req_json["request_status"] = 1;
-
-	return size*nmemb;*/
 };
 
 /**
@@ -151,12 +110,7 @@ Json::Value RestSession::_getreq(std::string full_path)
 		bool parse_status = _J_READER->parse(request.req_raw.c_str(),
 										request.req_raw.c_str() + request.req_raw.size(),
 										&request.req_json["response"],
-										&parse_errors);	
-
-		/*simdjson::dom::parser parser;
-		simdjson::dom::element element;
-		auto error = parser.parse(request.req_raw).get(element);
-		if(error) { std::cerr << error << std::endl; }*/
+										&parse_errors);
 
 		if (request.req_status != CURLE_OK || request.req_status == CURLE_HTTP_RETURNED_ERROR)
 		{
@@ -170,14 +124,6 @@ Json::Value RestSession::_getreq(std::string full_path)
 		request.req_json["request_status"] = 1;
 
 		return request.req_json;
-	}
-	catch(const std::runtime_error& re)
-	{
-		std::cerr << std::string(__FUNCTION__) << " " << "Runtime error: " << re.what() << std::endl;
-	}
-	catch(const std::exception& ex)
-	{
-		std::cerr << std::string(__FUNCTION__) << " " << "Error occurred: " << ex.what() << std::endl;
 	}
 	catch (...)
 	{
