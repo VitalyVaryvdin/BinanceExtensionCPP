@@ -9,6 +9,7 @@
 #include <boost/beast/websocket.hpp>
 #include <boost/asio/connect.hpp>
 
+#include <simdjson/simdjson.h>
 #include <json/json.h>
 #include <curl/curl.h>
 #include <openssl/hmac.h>

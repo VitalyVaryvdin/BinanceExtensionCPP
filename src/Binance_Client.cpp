@@ -115,7 +115,7 @@ std::string Client<T>::get_listen_key()
 	@return the json returned by the request
 */
 template<typename T>
-Json::Value Client<T>::ping_listen_key(const std::string& listen_key) 
+simdjson::dom::element Client<T>::ping_listen_key(const std::string& listen_key) 
 {
 	try
 	{
@@ -134,7 +134,7 @@ Json::Value Client<T>::ping_listen_key(const std::string& listen_key)
 	@return the json returned by the request
 */
 template<typename T>
-Json::Value Client<T>::revoke_listen_key(const std::string& listen_key)
+simdjson::dom::element Client<T>::revoke_listen_key(const std::string& listen_key)
 {
 	try
 	{
@@ -193,7 +193,7 @@ bool Client<T>::ping_client()
 	@return the json returned by the request
 */
 template<typename T>
-Json::Value Client<T>::exchange_info()
+simdjson::dom::element Client<T>::exchange_info()
 {
 	try
 	{
@@ -212,7 +212,7 @@ Json::Value Client<T>::exchange_info()
 	@return the json returned by the request
 */
 template<typename T>
-Json::Value Client<T>::order_book(const Params* params_ptr) 
+simdjson::dom::element Client<T>::order_book(const Params* params_ptr) 
 {
 	try
 	{
@@ -231,7 +231,7 @@ Json::Value Client<T>::order_book(const Params* params_ptr)
 	@return the json returned by the request
 */
 template<typename T>
-Json::Value Client<T>::public_trades_recent(const Params* params_ptr)
+simdjson::dom::element Client<T>::public_trades_recent(const Params* params_ptr)
 {
 	try
 	{
@@ -250,7 +250,7 @@ Json::Value Client<T>::public_trades_recent(const Params* params_ptr)
 	@return the json returned by the request
 */
 template<typename T>
-Json::Value Client<T>::public_trades_historical(const Params* params_ptr) 
+simdjson::dom::element Client<T>::public_trades_historical(const Params* params_ptr) 
 {
 	try
 	{
@@ -269,7 +269,7 @@ Json::Value Client<T>::public_trades_historical(const Params* params_ptr)
 	@return the json returned by the request
 */
 template<typename T>
-Json::Value Client<T>::public_trades_agg(const Params* params_ptr) 
+simdjson::dom::element Client<T>::public_trades_agg(const Params* params_ptr) 
 {
 	try
 	{
@@ -288,7 +288,7 @@ Json::Value Client<T>::public_trades_agg(const Params* params_ptr)
 	@return the json returned by the request
 */
 template<typename T>
-Json::Value Client<T>::klines(const Params* params_ptr)
+simdjson::dom::element Client<T>::klines(const Params* params_ptr)
 {
 	try
 	{
@@ -307,7 +307,7 @@ Json::Value Client<T>::klines(const Params* params_ptr)
 	@return the json returned by the request
 */
 template<typename T>
-Json::Value Client<T>::daily_ticker_stats(const Params* params_ptr)
+simdjson::dom::element Client<T>::daily_ticker_stats(const Params* params_ptr)
 {
 	try
 	{
@@ -326,7 +326,7 @@ Json::Value Client<T>::daily_ticker_stats(const Params* params_ptr)
 	@return the json returned by the request
 */
 template<typename T>
-Json::Value Client<T>::get_ticker(const Params* params_ptr)
+simdjson::dom::element Client<T>::get_ticker(const Params* params_ptr)
 {
 	try
 	{
@@ -345,7 +345,7 @@ Json::Value Client<T>::get_ticker(const Params* params_ptr)
 	@return the json returned by the request
 */
 template<typename T>
-Json::Value Client<T>::get_order_book_ticker(const Params* params_ptr) 
+simdjson::dom::element Client<T>::get_order_book_ticker(const Params* params_ptr) 
 {
 	try
 	{
@@ -369,7 +369,7 @@ Json::Value Client<T>::get_order_book_ticker(const Params* params_ptr)
 	@return the json returned by the request
 */
 template<typename T>
-Json::Value Client<T>::test_new_order(const Params* params_ptr) 
+simdjson::dom::element Client<T>::test_new_order(const Params* params_ptr) 
 {
 	try
 	{
@@ -388,7 +388,7 @@ Json::Value Client<T>::test_new_order(const Params* params_ptr)
 	@return the json returned by the request
 */
 template<typename T>
-Json::Value Client<T>::new_order(const Params* params_ptr) 
+simdjson::dom::element Client<T>::new_order(const Params* params_ptr) 
 {
 	try
 	{
@@ -407,7 +407,7 @@ Json::Value Client<T>::new_order(const Params* params_ptr)
 	@return the json returned by the request
 */
 template<typename T>
-Json::Value Client<T>::cancel_order(const Params* params_ptr) 
+simdjson::dom::element Client<T>::cancel_order(const Params* params_ptr) 
 {
 	try
 	{
@@ -426,7 +426,7 @@ Json::Value Client<T>::cancel_order(const Params* params_ptr)
 	@return the json returned by the request
 */
 template<typename T>
-Json::Value Client<T>::cancel_all_orders(const Params* params_ptr) 
+simdjson::dom::element Client<T>::cancel_all_orders(const Params* params_ptr) 
 {
 	try
 	{
@@ -445,7 +445,7 @@ Json::Value Client<T>::cancel_all_orders(const Params* params_ptr)
 	@return the json returned by the request
 */
 template<typename T>
-Json::Value Client<T>::query_order(const Params* params_ptr) 
+simdjson::dom::element Client<T>::query_order(const Params* params_ptr) 
 {
 	try
 	{
@@ -464,7 +464,7 @@ Json::Value Client<T>::query_order(const Params* params_ptr)
 	@return the json returned by the request
 */
 template<typename T>
-Json::Value Client<T>::open_orders(const Params* params_ptr) 
+simdjson::dom::element Client<T>::open_orders(const Params* params_ptr) 
 {
 	try
 	{
@@ -483,7 +483,7 @@ Json::Value Client<T>::open_orders(const Params* params_ptr)
 	@return the json returned by the request
 */
 template<typename T>
-Json::Value Client<T>::all_orders(const Params* params_ptr) 
+simdjson::dom::element Client<T>::all_orders(const Params* params_ptr) 
 {
 	try
 	{
@@ -502,7 +502,7 @@ Json::Value Client<T>::all_orders(const Params* params_ptr)
 	@return the json returned by the request
 */
 template<typename T>
-Json::Value Client<T>::account_info(const Params* params_ptr) 
+simdjson::dom::element Client<T>::account_info(const Params* params_ptr) 
 {
 	try
 	{
@@ -521,7 +521,7 @@ Json::Value Client<T>::account_info(const Params* params_ptr)
 	@return the json returned by the request
 */
 template<typename T>
-Json::Value Client<T>::account_trades_list(const Params* params_ptr) 
+simdjson::dom::element Client<T>::account_trades_list(const Params* params_ptr) 
 {
 	try
 	{
@@ -584,7 +584,7 @@ bool Client<T>::init_rest_session()
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::custom_get_req(const std::string& base, const std::string& endpoint, const Params* params_ptr, const bool& signature)
+simdjson::dom::element Client<T>::custom_get_req(const std::string& base, const std::string& endpoint, const Params* params_ptr, const bool& signature)
 {
 	try
 	{
@@ -608,7 +608,7 @@ Json::Value Client<T>::custom_get_req(const std::string& base, const std::string
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::custom_post_req(const std::string& base, const std::string& endpoint, const Params* params_ptr, const bool& signature)
+simdjson::dom::element Client<T>::custom_post_req(const std::string& base, const std::string& endpoint, const Params* params_ptr, const bool& signature)
 {
 	try
 	{
@@ -632,7 +632,7 @@ Json::Value Client<T>::custom_post_req(const std::string& base, const std::strin
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::custom_put_req(const std::string& base, const std::string& endpoint, const Params* params_ptr, const bool& signature)
+simdjson::dom::element Client<T>::custom_put_req(const std::string& base, const std::string& endpoint, const Params* params_ptr, const bool& signature)
 {
 	try
 	{
@@ -656,7 +656,7 @@ Json::Value Client<T>::custom_put_req(const std::string& base, const std::string
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::custom_delete_req(const std::string& base, const std::string& endpoint, const Params* params_ptr, const bool& signature)
+simdjson::dom::element Client<T>::custom_delete_req(const std::string& base, const std::string& endpoint, const Params* params_ptr, const bool& signature)
 {
 	try
 	{
@@ -835,13 +835,13 @@ Client<T>::Wallet::~Wallet()
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Wallet::get_all_coins(const Params* params_ptr)
+simdjson::dom::element Client<T>::Wallet::get_all_coins(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/capital/config/getall";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -858,13 +858,13 @@ Json::Value Client<T>::Wallet::get_all_coins(const Params* params_ptr)
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Wallet::daily_snapshot(const Params* params_ptr)
+simdjson::dom::element Client<T>::Wallet::daily_snapshot(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/accountSnapshot";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 
@@ -882,7 +882,7 @@ Json::Value Client<T>::Wallet::daily_snapshot(const Params* params_ptr)
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Wallet::fast_withdraw_switch(const bool& state)
+simdjson::dom::element Client<T>::Wallet::fast_withdraw_switch(const bool& state)
 {
 	try
 	{
@@ -890,7 +890,7 @@ Json::Value Client<T>::Wallet::fast_withdraw_switch(const bool& state)
 		std::string endpoint = state ? "/sapi/v1/account/enableFastWithdrawSwitch" : "/sapi/v1/account/disableFastWithdrawSwitch";
 		std::string full_path = _BASE_REST_SPOT + endpoint;
 		std::string query = user_client->_generate_query(&temp_params, 1);
-		Json::Value response = (user_client->_rest_client)->_postreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_postreq(full_path + query);
 
 		return response;
 	}
@@ -908,14 +908,14 @@ Json::Value Client<T>::Wallet::fast_withdraw_switch(const bool& state)
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Wallet::withdraw_balances(const Params* params_ptr)
+simdjson::dom::element Client<T>::Wallet::withdraw_balances(const Params* params_ptr)
 {
 	try
 	{
 		std::string endpoint = "/sapi/v1/capital/withdraw/apply";
 		std::string full_path = _BASE_REST_SPOT + endpoint;
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_postreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_postreq(full_path + query);
 
 		return response;
 	}
@@ -933,14 +933,14 @@ Json::Value Client<T>::Wallet::withdraw_balances(const Params* params_ptr)
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Wallet::deposit_history(const Params* params_ptr)
+simdjson::dom::element Client<T>::Wallet::deposit_history(const Params* params_ptr)
 {
 	try
 	{
 		std::string endpoint = "/sapi/v1/capital/deposit/hisrec";
 		std::string full_path = _BASE_REST_SPOT + endpoint;
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -958,14 +958,14 @@ Json::Value Client<T>::Wallet::deposit_history(const Params* params_ptr)
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Wallet::withdraw_history(const Params* params_ptr)
+simdjson::dom::element Client<T>::Wallet::withdraw_history(const Params* params_ptr)
 {
 	try
 	{
 		std::string endpoint = "/sapi/v1/capital/withdraw/history";
 		std::string full_path = _BASE_REST_SPOT + endpoint;
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -983,14 +983,14 @@ Json::Value Client<T>::Wallet::withdraw_history(const Params* params_ptr)
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Wallet::deposit_address(const Params* params_ptr)
+simdjson::dom::element Client<T>::Wallet::deposit_address(const Params* params_ptr)
 {
 	try
 	{
 		std::string endpoint = "/sapi/v1/capital/deposit/address";
 		std::string full_path = _BASE_REST_SPOT + endpoint;
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -1007,13 +1007,13 @@ Json::Value Client<T>::Wallet::deposit_address(const Params* params_ptr)
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Wallet::dust_transfer(const Params* params_ptr)
+simdjson::dom::element Client<T>::Wallet::dust_transfer(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/asset/dust";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_postreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_postreq(full_path + query);
 
 		return response;
 	}
@@ -1030,13 +1030,13 @@ Json::Value Client<T>::Wallet::dust_transfer(const Params* params_ptr)
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Wallet::asset_dividend_records(const Params* params_ptr)
+simdjson::dom::element Client<T>::Wallet::asset_dividend_records(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/asset/assetDividend";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_postreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_postreq(full_path + query);
 
 		return response;
 	}
@@ -1053,13 +1053,13 @@ Json::Value Client<T>::Wallet::asset_dividend_records(const Params* params_ptr)
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Wallet::make_user_transfer_universal(const Params* params_ptr)
+simdjson::dom::element Client<T>::Wallet::make_user_transfer_universal(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/asset/transfer";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_postreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_postreq(full_path + query);
 
 		return response;
 	}
@@ -1076,13 +1076,13 @@ Json::Value Client<T>::Wallet::make_user_transfer_universal(const Params* params
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Wallet::query_user_transfer_universal(const Params* params_ptr)
+simdjson::dom::element Client<T>::Wallet::query_user_transfer_universal(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/asset/transfer";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -1155,13 +1155,13 @@ Client<T>::FuturesWallet::~FuturesWallet()
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::FuturesWallet::futures_transfer(const Params* params_ptr)
+simdjson::dom::element Client<T>::FuturesWallet::futures_transfer(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/futures/transfer";
 		std::string query = this->user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (this->user_client->_rest_client)->_postreq(full_path + query);
+		simdjson::dom::element response = (this->user_client->_rest_client)->_postreq(full_path + query);
 
 		return response;
 	}
@@ -1178,13 +1178,13 @@ Json::Value Client<T>::FuturesWallet::futures_transfer(const Params* params_ptr)
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::FuturesWallet::futures_transfer_history(const Params* params_ptr)
+simdjson::dom::element Client<T>::FuturesWallet::futures_transfer_history(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/futures/transfer";
 		std::string query = this->user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (this->user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (this->user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -1201,13 +1201,13 @@ Json::Value Client<T>::FuturesWallet::futures_transfer_history(const Params* par
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::FuturesWallet::collateral_borrow(const Params* params_ptr)
+simdjson::dom::element Client<T>::FuturesWallet::collateral_borrow(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/futures/loan/borrow";
 		std::string query = this->user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (this->user_client->_rest_client)->_postreq(full_path + query);
+		simdjson::dom::element response = (this->user_client->_rest_client)->_postreq(full_path + query);
 
 		return response;
 	}
@@ -1224,13 +1224,13 @@ Json::Value Client<T>::FuturesWallet::collateral_borrow(const Params* params_ptr
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::FuturesWallet::collateral_borrow_history(const Params* params_ptr)
+simdjson::dom::element Client<T>::FuturesWallet::collateral_borrow_history(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/futures/loan/borrow/history";
 		std::string query = this->user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (this->user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (this->user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -1247,13 +1247,13 @@ Json::Value Client<T>::FuturesWallet::collateral_borrow_history(const Params* pa
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::FuturesWallet::collateral_cross_repay(const Params* params_ptr)
+simdjson::dom::element Client<T>::FuturesWallet::collateral_cross_repay(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/futures/loan/repay";
 		std::string query = this->user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (this->user_client->_rest_client)->_postreq(full_path + query);
+		simdjson::dom::element response = (this->user_client->_rest_client)->_postreq(full_path + query);
 
 		return response;
 	}
@@ -1270,13 +1270,13 @@ Json::Value Client<T>::FuturesWallet::collateral_cross_repay(const Params* param
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::FuturesWallet::collateral_repay_history(const Params* params_ptr)
+simdjson::dom::element Client<T>::FuturesWallet::collateral_repay_history(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/futures/loan/repay/history";
 		std::string query = this->user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (this->user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (this->user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -1293,14 +1293,14 @@ Json::Value Client<T>::FuturesWallet::collateral_repay_history(const Params* par
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::FuturesWallet::collateral_wallet(const Params* params_ptr, const unsigned int version)
+simdjson::dom::element Client<T>::FuturesWallet::collateral_wallet(const Params* params_ptr, const unsigned int version)
 {
 	try
 	{
 		
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v" + std::to_string(version) + "/futures/loan/wallet";
 		std::string query = this->user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (this->user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (this->user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -1318,13 +1318,13 @@ Json::Value Client<T>::FuturesWallet::collateral_wallet(const Params* params_ptr
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::FuturesWallet::collateral_info(const Params* params_ptr, const unsigned int version)
+simdjson::dom::element Client<T>::FuturesWallet::collateral_info(const Params* params_ptr, const unsigned int version)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v" + std::to_string(version) + "/futures/loan/configs";
 		std::string query = this->user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (this->user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (this->user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -1341,13 +1341,13 @@ Json::Value Client<T>::FuturesWallet::collateral_info(const Params* params_ptr, 
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::FuturesWallet::collateral_adjust_calc_rate(const Params* params_ptr, const unsigned int version)
+simdjson::dom::element Client<T>::FuturesWallet::collateral_adjust_calc_rate(const Params* params_ptr, const unsigned int version)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v" + std::to_string(version) + "/futures/loan/calcAdjustLevel";
 		std::string query = this->user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (this->user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (this->user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -1364,13 +1364,13 @@ Json::Value Client<T>::FuturesWallet::collateral_adjust_calc_rate(const Params* 
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::FuturesWallet::collateral_adjust_get_max(const Params* params_ptr, const unsigned int version)
+simdjson::dom::element Client<T>::FuturesWallet::collateral_adjust_get_max(const Params* params_ptr, const unsigned int version)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v" + std::to_string(version) + "/futures/loan/calcMaxAdjustAmount";
 		std::string query = this->user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (this->user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (this->user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -1387,13 +1387,13 @@ Json::Value Client<T>::FuturesWallet::collateral_adjust_get_max(const Params* pa
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::FuturesWallet::collateral_adjust(const Params* params_ptr, const unsigned int version)
+simdjson::dom::element Client<T>::FuturesWallet::collateral_adjust(const Params* params_ptr, const unsigned int version)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v" + std::to_string(version) + "/futures/loan/adjustCollateral";
 		std::string query = this->user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (this->user_client->_rest_client)->_postreq(full_path + query);
+		simdjson::dom::element response = (this->user_client->_rest_client)->_postreq(full_path + query);
 
 		return response;
 	}
@@ -1410,13 +1410,13 @@ Json::Value Client<T>::FuturesWallet::collateral_adjust(const Params* params_ptr
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::FuturesWallet::collateral_adjust_history(const Params* params_ptr)
+simdjson::dom::element Client<T>::FuturesWallet::collateral_adjust_history(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/futures/loan/adjustCollateral/history";
 		std::string query = this->user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (this->user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (this->user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -1433,13 +1433,13 @@ Json::Value Client<T>::FuturesWallet::collateral_adjust_history(const Params* pa
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::FuturesWallet::collateral_liquidation_history(const Params* params_ptr)
+simdjson::dom::element Client<T>::FuturesWallet::collateral_liquidation_history(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/futures/loan/liquidationHistory";
 		std::string query = this->user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (this->user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (this->user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -1456,13 +1456,13 @@ Json::Value Client<T>::FuturesWallet::collateral_liquidation_history(const Param
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::FuturesWallet::collateral_check_repay_limit(const Params* params_ptr)
+simdjson::dom::element Client<T>::FuturesWallet::collateral_check_repay_limit(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/futures/loan/collateralRepayLimit";
 		std::string query = this->user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (this->user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (this->user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -1481,13 +1481,13 @@ Json::Value Client<T>::FuturesWallet::collateral_check_repay_limit(const Params*
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::FuturesWallet::collateral_get_repay_quote(const Params* params_ptr)
+simdjson::dom::element Client<T>::FuturesWallet::collateral_get_repay_quote(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/futures/loan/collateralRepay";
 		std::string query = this->user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (this->user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (this->user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -1505,13 +1505,13 @@ Json::Value Client<T>::FuturesWallet::collateral_get_repay_quote(const Params* p
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::FuturesWallet::collateral_repay(const Params* params_ptr)
+simdjson::dom::element Client<T>::FuturesWallet::collateral_repay(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/futures/loan/collateralRepay";
 		std::string query = this->user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (this->user_client->_rest_client)->_postreq(full_path + query);
+		simdjson::dom::element response = (this->user_client->_rest_client)->_postreq(full_path + query);
 
 		return response;
 	}
@@ -1529,13 +1529,13 @@ Json::Value Client<T>::FuturesWallet::collateral_repay(const Params* params_ptr)
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::FuturesWallet::collateral_repay_result(const Params* params_ptr)
+simdjson::dom::element Client<T>::FuturesWallet::collateral_repay_result(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/futures/loan/collateralRepayResult";
 		std::string query = this->user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (this->user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (this->user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -1553,13 +1553,13 @@ Json::Value Client<T>::FuturesWallet::collateral_repay_result(const Params* para
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::FuturesWallet::collateral_cross_interest_history(const Params* params_ptr)
+simdjson::dom::element Client<T>::FuturesWallet::collateral_cross_interest_history(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/futures/loan/interestHistory";
 		std::string query = this->user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (this->user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (this->user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -1634,13 +1634,13 @@ Client<T>::SubAccount::~SubAccount()
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::SubAccount::create_virtual_subaccount(const Params* params_ptr)
+simdjson::dom::element Client<T>::SubAccount::create_virtual_subaccount(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/sub-account/virtualSubAccount";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_postreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_postreq(full_path + query);
 
 		return response;
 	}
@@ -1658,13 +1658,13 @@ Json::Value Client<T>::SubAccount::create_virtual_subaccount(const Params* param
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::SubAccount::query_subaccount_list_sapi(const Params* params_ptr)
+simdjson::dom::element Client<T>::SubAccount::query_subaccount_list_sapi(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/sub-account/list";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -1681,13 +1681,13 @@ Json::Value Client<T>::SubAccount::query_subaccount_list_sapi(const Params* para
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::SubAccount::transfer_spot_subaccount_history(const Params* params_ptr)
+simdjson::dom::element Client<T>::SubAccount::transfer_spot_subaccount_history(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/sub-account/sub/transfer/history";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -1704,13 +1704,13 @@ Json::Value Client<T>::SubAccount::transfer_spot_subaccount_history(const Params
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::SubAccount::futures_transfer_master_history(const Params* params_ptr)
+simdjson::dom::element Client<T>::SubAccount::futures_transfer_master_history(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/sub-account/futures/internalTransfer";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -1727,13 +1727,13 @@ Json::Value Client<T>::SubAccount::futures_transfer_master_history(const Params*
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::SubAccount::futures_transfer_master_to_subaccount(const Params* params_ptr)
+simdjson::dom::element Client<T>::SubAccount::futures_transfer_master_to_subaccount(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/sub-account/futures/internalTransfer";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_postreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_postreq(full_path + query);
 
 		return response;
 	}
@@ -1750,13 +1750,13 @@ Json::Value Client<T>::SubAccount::futures_transfer_master_to_subaccount(const P
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::SubAccount::get_subaccount_balances_summary(const Params* params_ptr)
+simdjson::dom::element Client<T>::SubAccount::get_subaccount_balances_summary(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/sub-account/spotSummary";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -1773,13 +1773,13 @@ Json::Value Client<T>::SubAccount::get_subaccount_balances_summary(const Params*
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::SubAccount::get_subaccount_deposit_address(const Params* params_ptr)
+simdjson::dom::element Client<T>::SubAccount::get_subaccount_deposit_address(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/capital/deposit/subAddress";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -1796,13 +1796,13 @@ Json::Value Client<T>::SubAccount::get_subaccount_deposit_address(const Params* 
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::SubAccount::get_subaccount_deposit_history(const Params* params_ptr)
+simdjson::dom::element Client<T>::SubAccount::get_subaccount_deposit_history(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/capital/deposit/subHisrec";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -1819,13 +1819,13 @@ Json::Value Client<T>::SubAccount::get_subaccount_deposit_history(const Params* 
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::SubAccount::get_subaccount_future_margin_status(const Params* params_ptr)
+simdjson::dom::element Client<T>::SubAccount::get_subaccount_future_margin_status(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/sub-account/status";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -1842,13 +1842,13 @@ Json::Value Client<T>::SubAccount::get_subaccount_future_margin_status(const Par
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::SubAccount::enable_subaccount_margin(const Params* params_ptr)
+simdjson::dom::element Client<T>::SubAccount::enable_subaccount_margin(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/sub-account/margin/enable";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -1865,13 +1865,13 @@ Json::Value Client<T>::SubAccount::enable_subaccount_margin(const Params* params
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::SubAccount::get_subaccount_margin_status(const Params* params_ptr)
+simdjson::dom::element Client<T>::SubAccount::get_subaccount_margin_status(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/sub-account/margin/account";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -1888,13 +1888,13 @@ Json::Value Client<T>::SubAccount::get_subaccount_margin_status(const Params* pa
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::SubAccount::get_subaccount_margin_summary(const Params* params_ptr)
+simdjson::dom::element Client<T>::SubAccount::get_subaccount_margin_summary(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/sub-account/margin/accountSummary";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -1911,13 +1911,13 @@ Json::Value Client<T>::SubAccount::get_subaccount_margin_summary(const Params* p
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::SubAccount::enable_subaccount_futures(const Params* params_ptr)
+simdjson::dom::element Client<T>::SubAccount::enable_subaccount_futures(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/sub-account/futures/enable";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -1934,13 +1934,13 @@ Json::Value Client<T>::SubAccount::enable_subaccount_futures(const Params* param
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::SubAccount::get_subaccount_futures_status(const Params* params_ptr)
+simdjson::dom::element Client<T>::SubAccount::get_subaccount_futures_status(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/sub-account/futures/account";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -1957,13 +1957,13 @@ Json::Value Client<T>::SubAccount::get_subaccount_futures_status(const Params* p
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::SubAccount::get_subaccount_futures_summary(const Params* params_ptr)
+simdjson::dom::element Client<T>::SubAccount::get_subaccount_futures_summary(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/sub-account/futures/accountSummary";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -1980,13 +1980,13 @@ Json::Value Client<T>::SubAccount::get_subaccount_futures_summary(const Params* 
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::SubAccount::get_subaccount_futures_positionrisk(const Params* params_ptr)
+simdjson::dom::element Client<T>::SubAccount::get_subaccount_futures_positionrisk(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/sub-account/futures/positionRisk";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -2003,13 +2003,13 @@ Json::Value Client<T>::SubAccount::get_subaccount_futures_positionrisk(const Par
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::SubAccount::transfer_to_subaccount_futures(const Params* params_ptr)
+simdjson::dom::element Client<T>::SubAccount::transfer_to_subaccount_futures(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/sub-account/futures/transfer";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -2026,13 +2026,13 @@ Json::Value Client<T>::SubAccount::transfer_to_subaccount_futures(const Params* 
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::SubAccount::transfer_to_subaccount_margin(const Params* params_ptr)
+simdjson::dom::element Client<T>::SubAccount::transfer_to_subaccount_margin(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/sub-account/margin/transfer";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -2049,13 +2049,13 @@ Json::Value Client<T>::SubAccount::transfer_to_subaccount_margin(const Params* p
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::SubAccount::transfer_subaccount_to_subaccount(const Params* params_ptr)
+simdjson::dom::element Client<T>::SubAccount::transfer_subaccount_to_subaccount(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/sub-account/transfer/subToSub";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -2072,13 +2072,13 @@ Json::Value Client<T>::SubAccount::transfer_subaccount_to_subaccount(const Param
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::SubAccount::transfer_subaccount_to_master(const Params* params_ptr)
+simdjson::dom::element Client<T>::SubAccount::transfer_subaccount_to_master(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/sub-account/transfer/subToMaster";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -2095,13 +2095,13 @@ Json::Value Client<T>::SubAccount::transfer_subaccount_to_master(const Params* p
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::SubAccount::transfer_subaccount_history(const Params* params_ptr)
+simdjson::dom::element Client<T>::SubAccount::transfer_subaccount_history(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/sub-account/transfer/subUserHistory";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -2118,13 +2118,13 @@ Json::Value Client<T>::SubAccount::transfer_subaccount_history(const Params* par
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::SubAccount::make_universal_transfer(const Params* params_ptr)
+simdjson::dom::element Client<T>::SubAccount::make_universal_transfer(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/sub-account/universalTransfer";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_postreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_postreq(full_path + query);
 
 		return response;
 	}
@@ -2141,13 +2141,13 @@ Json::Value Client<T>::SubAccount::make_universal_transfer(const Params* params_
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::SubAccount::get_universal_transfer_history(const Params* params_ptr)
+simdjson::dom::element Client<T>::SubAccount::get_universal_transfer_history(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/sub-account/universalTransfer";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -2164,13 +2164,13 @@ Json::Value Client<T>::SubAccount::get_universal_transfer_history(const Params* 
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::SubAccount::get_details_subaccount_futures(const Params* params_ptr)
+simdjson::dom::element Client<T>::SubAccount::get_details_subaccount_futures(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v2/sub-account/futures/account";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -2187,13 +2187,13 @@ Json::Value Client<T>::SubAccount::get_details_subaccount_futures(const Params* 
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::SubAccount::get_summary_subaccount_futures(const Params* params_ptr)
+simdjson::dom::element Client<T>::SubAccount::get_summary_subaccount_futures(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v2/sub-account/futures/accountSummary";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -2210,13 +2210,13 @@ Json::Value Client<T>::SubAccount::get_summary_subaccount_futures(const Params* 
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::SubAccount::get_positionrisk_subaccount_futures(const Params* params_ptr)
+simdjson::dom::element Client<T>::SubAccount::get_positionrisk_subaccount_futures(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v2/sub-account/futures/positionRisk";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -2234,13 +2234,13 @@ Json::Value Client<T>::SubAccount::get_positionrisk_subaccount_futures(const Par
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::SubAccount::enable_leverage_token_subaccount(const Params* params_ptr)
+simdjson::dom::element Client<T>::SubAccount::enable_leverage_token_subaccount(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/sub-account/blvt/enable";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_postreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_postreq(full_path + query);
 
 		return response;
 	}
@@ -2309,13 +2309,13 @@ Client<T>::MarginAccount::~MarginAccount()
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::MarginAccount::margin_transfer(const Params* params_ptr)
+simdjson::dom::element Client<T>::MarginAccount::margin_transfer(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/margin/transfer";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_postreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_postreq(full_path + query);
 
 		return response;
 	}
@@ -2332,13 +2332,13 @@ Json::Value Client<T>::MarginAccount::margin_transfer(const Params* params_ptr)
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::MarginAccount::margin_borrow(const Params* params_ptr)
+simdjson::dom::element Client<T>::MarginAccount::margin_borrow(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/margin/loan";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_postreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_postreq(full_path + query);
 
 		return response;
 	}
@@ -2355,13 +2355,13 @@ Json::Value Client<T>::MarginAccount::margin_borrow(const Params* params_ptr)
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::MarginAccount::margin_repay(const Params* params_ptr)
+simdjson::dom::element Client<T>::MarginAccount::margin_repay(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/margin/repay";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_postreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_postreq(full_path + query);
 
 		return response;
 	}
@@ -2378,13 +2378,13 @@ Json::Value Client<T>::MarginAccount::margin_repay(const Params* params_ptr)
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::MarginAccount::margin_asset_query(const Params* params_ptr)
+simdjson::dom::element Client<T>::MarginAccount::margin_asset_query(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/margin/asset";
 		std::string query = params_ptr ? this->user_client->_generate_query(params_ptr) : "";
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path);
 
 		return response;
 	}
@@ -2401,13 +2401,13 @@ Json::Value Client<T>::MarginAccount::margin_asset_query(const Params* params_pt
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::MarginAccount::margin_pair_query(const Params* params_ptr)
+simdjson::dom::element Client<T>::MarginAccount::margin_pair_query(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/margin/pair";
 		std::string query = params_ptr ? this->user_client->_generate_query(params_ptr) : "";
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path);
 
 		return response;
 	}
@@ -2424,12 +2424,12 @@ Json::Value Client<T>::MarginAccount::margin_pair_query(const Params* params_ptr
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::MarginAccount::margin_all_assets_query()
+simdjson::dom::element Client<T>::MarginAccount::margin_all_assets_query()
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/margin/allAssets";
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path);
 
 		return response;
 	}
@@ -2446,12 +2446,12 @@ Json::Value Client<T>::MarginAccount::margin_all_assets_query()
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::MarginAccount::margin_all_pairs_query()
+simdjson::dom::element Client<T>::MarginAccount::margin_all_pairs_query()
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/margin/allPairs";
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path);
 
 		return response;
 	}
@@ -2468,13 +2468,13 @@ Json::Value Client<T>::MarginAccount::margin_all_pairs_query()
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::MarginAccount::margin_price_index(const Params* params_ptr)
+simdjson::dom::element Client<T>::MarginAccount::margin_price_index(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/margin/transfer";
 		std::string query = params_ptr ? this->user_client->_generate_query(params_ptr) : "";
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -2491,13 +2491,13 @@ Json::Value Client<T>::MarginAccount::margin_price_index(const Params* params_pt
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::MarginAccount::margin_new_order(const Params* params_ptr)
+simdjson::dom::element Client<T>::MarginAccount::margin_new_order(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/margin/order";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_postreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_postreq(full_path + query);
 
 		return response;
 	}
@@ -2514,13 +2514,13 @@ Json::Value Client<T>::MarginAccount::margin_new_order(const Params* params_ptr)
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::MarginAccount::margin_cancel_order(const Params* params_ptr)
+simdjson::dom::element Client<T>::MarginAccount::margin_cancel_order(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/margin/order";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_deletereq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_deletereq(full_path + query);
 
 		return response;
 	}
@@ -2537,13 +2537,13 @@ Json::Value Client<T>::MarginAccount::margin_cancel_order(const Params* params_p
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::MarginAccount::margin_cancel_all_orders(const Params* params_ptr)
+simdjson::dom::element Client<T>::MarginAccount::margin_cancel_all_orders(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/margin/openOrders";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_deletereq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_deletereq(full_path + query);
 
 		return response;
 	}
@@ -2564,13 +2564,13 @@ Json::Value Client<T>::MarginAccount::margin_cancel_all_orders(const Params* par
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::MarginAccount::margin_transfer_history(const Params* params_ptr)
+simdjson::dom::element Client<T>::MarginAccount::margin_transfer_history(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/margin/transfer";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -2592,13 +2592,13 @@ Json::Value Client<T>::MarginAccount::margin_transfer_history(const Params* para
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::MarginAccount::margin_loan_record(const Params* params_ptr)
+simdjson::dom::element Client<T>::MarginAccount::margin_loan_record(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/margin/loan";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -2620,13 +2620,13 @@ Json::Value Client<T>::MarginAccount::margin_loan_record(const Params* params_pt
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::MarginAccount::margin_repay_record(const Params* params_ptr)
+simdjson::dom::element Client<T>::MarginAccount::margin_repay_record(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/margin/repay";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -2652,13 +2652,13 @@ Json::Value Client<T>::MarginAccount::margin_repay_record(const Params* params_p
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::MarginAccount::margin_interest_history(const Params* params_ptr)
+simdjson::dom::element Client<T>::MarginAccount::margin_interest_history(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/margin/interestHistory";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -2675,13 +2675,13 @@ Json::Value Client<T>::MarginAccount::margin_interest_history(const Params* para
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::MarginAccount::margin_liquidations_record(const Params* params_ptr)
+simdjson::dom::element Client<T>::MarginAccount::margin_liquidations_record(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/margin/forceLiquidationRec";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -2698,13 +2698,13 @@ Json::Value Client<T>::MarginAccount::margin_liquidations_record(const Params* p
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::MarginAccount::margin_account_info(const Params* params_ptr)
+simdjson::dom::element Client<T>::MarginAccount::margin_account_info(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/margin/account";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -2724,13 +2724,13 @@ Json::Value Client<T>::MarginAccount::margin_account_info(const Params* params_p
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::MarginAccount::margin_account_order(const Params* params_ptr)
+simdjson::dom::element Client<T>::MarginAccount::margin_account_order(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/margin/order";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -2751,13 +2751,13 @@ Json::Value Client<T>::MarginAccount::margin_account_order(const Params* params_
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::MarginAccount::margin_account_open_orders(const Params* params_ptr)
+simdjson::dom::element Client<T>::MarginAccount::margin_account_open_orders(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/margin/openOrders";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -2777,13 +2777,13 @@ Json::Value Client<T>::MarginAccount::margin_account_open_orders(const Params* p
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::MarginAccount::margin_account_all_orders(const Params* params_ptr)
+simdjson::dom::element Client<T>::MarginAccount::margin_account_all_orders(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/margin/allOrders";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -2802,13 +2802,13 @@ Json::Value Client<T>::MarginAccount::margin_account_all_orders(const Params* pa
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::MarginAccount::margin_account_trades_list(const Params* params_ptr)
+simdjson::dom::element Client<T>::MarginAccount::margin_account_trades_list(const Params* params_ptr)
 {
 	try
 	{ 
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/margin/myTrades";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -2828,13 +2828,13 @@ Json::Value Client<T>::MarginAccount::margin_account_trades_list(const Params* p
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::MarginAccount::margin_max_borrow(const Params* params_ptr)
+simdjson::dom::element Client<T>::MarginAccount::margin_max_borrow(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/margin/maxBorrowable";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -2853,13 +2853,13 @@ Json::Value Client<T>::MarginAccount::margin_max_borrow(const Params* params_ptr
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::MarginAccount::margin_max_transfer(const Params* params_ptr)
+simdjson::dom::element Client<T>::MarginAccount::margin_max_transfer(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/margin/maxTransferable";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -2877,13 +2877,13 @@ Json::Value Client<T>::MarginAccount::margin_max_transfer(const Params* params_p
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::MarginAccount::margin_isolated_margin_transfer(const Params* params_ptr)
+simdjson::dom::element Client<T>::MarginAccount::margin_isolated_margin_transfer(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/margin/isolated/transfer";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_postreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_postreq(full_path + query);
 
 		return response;
 	}
@@ -2901,13 +2901,13 @@ Json::Value Client<T>::MarginAccount::margin_isolated_margin_transfer(const Para
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::MarginAccount::margin_isolated_margin_transfer_history(const Params* params_ptr)
+simdjson::dom::element Client<T>::MarginAccount::margin_isolated_margin_transfer_history(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/margin/isolated/transfer";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -2927,13 +2927,13 @@ Json::Value Client<T>::MarginAccount::margin_isolated_margin_transfer_history(co
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::MarginAccount::margin_isolated_margin_account_info(const Params* params_ptr)
+simdjson::dom::element Client<T>::MarginAccount::margin_isolated_margin_account_info(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/margin/isolated/account";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -2951,13 +2951,13 @@ Json::Value Client<T>::MarginAccount::margin_isolated_margin_account_info(const 
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::MarginAccount::margin_isolated_margin_symbol(const Params* params_ptr)
+simdjson::dom::element Client<T>::MarginAccount::margin_isolated_margin_symbol(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/margin/isolated/pair";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -2975,13 +2975,13 @@ Json::Value Client<T>::MarginAccount::margin_isolated_margin_symbol(const Params
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::MarginAccount::margin_isolated_margin_symbol_all(const Params* params_ptr)
+simdjson::dom::element Client<T>::MarginAccount::margin_isolated_margin_symbol_all(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/margin/isolated/allPairs";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -2999,13 +2999,13 @@ Json::Value Client<T>::MarginAccount::margin_isolated_margin_symbol_all(const Pa
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::MarginAccount::toggle_bnb_burn(const Params* params_ptr)
+simdjson::dom::element Client<T>::MarginAccount::toggle_bnb_burn(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/bnbBurn";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_postreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_postreq(full_path + query);
 
 		return response;
 	}
@@ -3023,13 +3023,13 @@ Json::Value Client<T>::MarginAccount::toggle_bnb_burn(const Params* params_ptr)
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::MarginAccount::get_bnb_burn_status(const Params* params_ptr)
+simdjson::dom::element Client<T>::MarginAccount::get_bnb_burn_status(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/bnbBurn";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -3047,13 +3047,13 @@ Json::Value Client<T>::MarginAccount::get_bnb_burn_status(const Params* params_p
 	@return the json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::MarginAccount::query_margin_interest_rate_history(const Params* params_ptr)
+simdjson::dom::element Client<T>::MarginAccount::query_margin_interest_rate_history(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/margin/interestRateHistory";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -3075,8 +3075,8 @@ std::string Client<T>::MarginAccount::margin_get_listen_key()
 	{
 		std::string endpoint = "/sapi/v1/userDataStream";
 		std::string full_path = _BASE_REST_SPOT + endpoint;
-		Json::Value response = (this->user_client->_rest_client)->_postreq(full_path);
-		return response["response"]["listenKey"].asString();
+		simdjson::dom::element response = (this->user_client->_rest_client)->_postreq(full_path);
+		return std::string(response["listenKey"].get_string().value());
 	}
 	catch (ClientException e)
 	{
@@ -3097,9 +3097,9 @@ std::string Client<T>::MarginAccount::margin_isolated_get_listen_key(const std::
 	{
 		std::string endpoint = "/sapi/v1/userDataStream/isolated?symbol=" + symbol;
 		std::string full_path = _BASE_REST_SPOT + endpoint;
-		Json::Value response = (this->user_client->_rest_client)->_postreq(full_path);
+		simdjson::dom::element response = (this->user_client->_rest_client)->_postreq(full_path);
 
-		return response["response"]["listenKey"].asString();
+		return std::string(response["listenKey"].get_string().value());
 	}
 	catch (ClientException e)
 	{
@@ -3114,13 +3114,13 @@ std::string Client<T>::MarginAccount::margin_isolated_get_listen_key(const std::
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::MarginAccount::margin_ping_listen_key(const std::string& listen_key)
+simdjson::dom::element Client<T>::MarginAccount::margin_ping_listen_key(const std::string& listen_key)
 {
 	try
 	{
 		std::string endpoint = "/sapi/v1/userDataStream";
 		std::string full_path = _BASE_REST_SPOT + endpoint + "?listenKey=" + listen_key;
-		Json::Value response = listen_key.empty() ? (this->user_client->_rest_client)->_putreq(full_path) : (this->user_client->_rest_client)->_postreq(full_path);
+		simdjson::dom::element response = listen_key.empty() ? (this->user_client->_rest_client)->_putreq(full_path) : (this->user_client->_rest_client)->_postreq(full_path);
 
 		return response;
 	}
@@ -3137,13 +3137,13 @@ Json::Value Client<T>::MarginAccount::margin_ping_listen_key(const std::string& 
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::MarginAccount::margin_isolated_ping_listen_key(const std::string& listen_key, const std::string symbol)
+simdjson::dom::element Client<T>::MarginAccount::margin_isolated_ping_listen_key(const std::string& listen_key, const std::string symbol)
 {
 	try
 	{
 		std::string endpoint = "/sapi/v1/userDataStream/isolated?symbol=" + symbol;
 		std::string full_path = _BASE_REST_SPOT + endpoint + "?listenKey=" + listen_key;
-		Json::Value response = listen_key.empty() ? (this->user_client->_rest_client)->_putreq(full_path) : (this->user_client->_rest_client)->_postreq(full_path);
+		simdjson::dom::element response = listen_key.empty() ? (this->user_client->_rest_client)->_putreq(full_path) : (this->user_client->_rest_client)->_postreq(full_path);
 
 		return response;
 	}
@@ -3160,13 +3160,13 @@ Json::Value Client<T>::MarginAccount::margin_isolated_ping_listen_key(const std:
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::MarginAccount::margin_revoke_listen_key(const std::string& listen_key)
+simdjson::dom::element Client<T>::MarginAccount::margin_revoke_listen_key(const std::string& listen_key)
 {
 	try
 	{
 		std::string endpoint = "/sapi/v1/userDataStream";
 		std::string full_path = _BASE_REST_SPOT + endpoint + "?listenKey=" + listen_key;
-		Json::Value response = (this->user_client->_rest_client)->_deletereq(full_path);
+		simdjson::dom::element response = (this->user_client->_rest_client)->_deletereq(full_path);
 
 		return response;
 	}
@@ -3184,13 +3184,13 @@ Json::Value Client<T>::MarginAccount::margin_revoke_listen_key(const std::string
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::MarginAccount::margin_isolated_revoke_listen_key(const std::string& listen_key, const std::string symbol)
+simdjson::dom::element Client<T>::MarginAccount::margin_isolated_revoke_listen_key(const std::string& listen_key, const std::string symbol)
 {
 	try
 	{
 		std::string endpoint = "/sapi/v1/userDataStream/isolated?symbol=" + symbol;
 		std::string full_path = _BASE_REST_SPOT + endpoint + "?listenKey=" + listen_key;
-		Json::Value response = (this->user_client->_rest_client)->_deletereq(full_path);
+		simdjson::dom::element response = (this->user_client->_rest_client)->_deletereq(full_path);
 
 		return response;
 	}
@@ -3258,13 +3258,13 @@ Client<T>::Savings::~Savings()
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Savings::get_product_list_flexible(const Params* params_ptr)
+simdjson::dom::element Client<T>::Savings::get_product_list_flexible(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/lending/daily/product/list";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -3281,13 +3281,13 @@ Json::Value Client<T>::Savings::get_product_list_flexible(const Params* params_p
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Savings::get_product_daily_quota_purchase_flexible(const Params* params_ptr)
+simdjson::dom::element Client<T>::Savings::get_product_daily_quota_purchase_flexible(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/lending/daily/userLeftQuota";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -3304,13 +3304,13 @@ Json::Value Client<T>::Savings::get_product_daily_quota_purchase_flexible(const 
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Savings::purchase_product_flexible(const Params* params_ptr)
+simdjson::dom::element Client<T>::Savings::purchase_product_flexible(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/lending/daily/purchase";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_postreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_postreq(full_path + query);
 
 		return response;
 	}
@@ -3327,13 +3327,13 @@ Json::Value Client<T>::Savings::purchase_product_flexible(const Params* params_p
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Savings::get_product_daily_quota_redemption_flexible(const Params* params_ptr)
+simdjson::dom::element Client<T>::Savings::get_product_daily_quota_redemption_flexible(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/lending/daily/userRedemptionQuota";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -3350,13 +3350,13 @@ Json::Value Client<T>::Savings::get_product_daily_quota_redemption_flexible(cons
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Savings::redeem_product_flexible(const Params* params_ptr)
+simdjson::dom::element Client<T>::Savings::redeem_product_flexible(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/lending/daily/redeem";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_postreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_postreq(full_path + query);
 
 		return response;
 	}
@@ -3373,13 +3373,13 @@ Json::Value Client<T>::Savings::redeem_product_flexible(const Params* params_ptr
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Savings::get_product_position_flexible(const Params* params_ptr)
+simdjson::dom::element Client<T>::Savings::get_product_position_flexible(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/lending/daily/token/position";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -3396,13 +3396,13 @@ Json::Value Client<T>::Savings::get_product_position_flexible(const Params* para
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Savings::get_product_list_fixed(const Params* params_ptr)
+simdjson::dom::element Client<T>::Savings::get_product_list_fixed(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/lending/project/list";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -3419,13 +3419,13 @@ Json::Value Client<T>::Savings::get_product_list_fixed(const Params* params_ptr)
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Savings::purchase_product_fixed(const Params* params_ptr)
+simdjson::dom::element Client<T>::Savings::purchase_product_fixed(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/lending/customizedFixed/purchase";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_postreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_postreq(full_path + query);
 
 		return response;
 	}
@@ -3442,13 +3442,13 @@ Json::Value Client<T>::Savings::purchase_product_fixed(const Params* params_ptr)
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Savings::get_product_position_fixed(const Params* params_ptr)
+simdjson::dom::element Client<T>::Savings::get_product_position_fixed(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/lending/project/position/list";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -3465,13 +3465,13 @@ Json::Value Client<T>::Savings::get_product_position_fixed(const Params* params_
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Savings::lending_account(const Params* params_ptr)
+simdjson::dom::element Client<T>::Savings::lending_account(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/lending/union/account";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -3488,13 +3488,13 @@ Json::Value Client<T>::Savings::lending_account(const Params* params_ptr)
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Savings::get_purchase_record(const Params* params_ptr)
+simdjson::dom::element Client<T>::Savings::get_purchase_record(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/lending/union/purchaseRecord";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -3511,13 +3511,13 @@ Json::Value Client<T>::Savings::get_purchase_record(const Params* params_ptr)
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Savings::get_redemption_record(const Params* params_ptr)
+simdjson::dom::element Client<T>::Savings::get_redemption_record(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/lending/union/redemptionRecord";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -3534,13 +3534,13 @@ Json::Value Client<T>::Savings::get_redemption_record(const Params* params_ptr)
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Savings::get_interest_history(const Params* params_ptr)
+simdjson::dom::element Client<T>::Savings::get_interest_history(const Params* params_ptr)
 {
 	try
 	{ 
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/lending/union/interestHistory";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -3557,13 +3557,13 @@ Json::Value Client<T>::Savings::get_interest_history(const Params* params_ptr)
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Savings::change_fixed_pos_to_daily_pos(const Params* params_ptr)
+simdjson::dom::element Client<T>::Savings::change_fixed_pos_to_daily_pos(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/lending/positionChanged";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -3632,12 +3632,12 @@ Client<T>::Mining::~Mining()
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Mining::algo_list()
+simdjson::dom::element Client<T>::Mining::algo_list()
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/mining/pub/algoList";
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path);
 
 		return response;
 	}
@@ -3653,12 +3653,12 @@ Json::Value Client<T>::Mining::algo_list()
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Mining::coin_list()
+simdjson::dom::element Client<T>::Mining::coin_list()
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/mining/pub/coinList";
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path);
 
 		return response;
 	}
@@ -3675,13 +3675,13 @@ Json::Value Client<T>::Mining::coin_list()
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Mining::get_miner_list_detail(const Params* params_ptr)
+simdjson::dom::element Client<T>::Mining::get_miner_list_detail(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/mining/worker/detail";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -3698,13 +3698,13 @@ Json::Value Client<T>::Mining::get_miner_list_detail(const Params* params_ptr)
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Mining::get_miner_list(const Params* params_ptr)
+simdjson::dom::element Client<T>::Mining::get_miner_list(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/mining/worker/list";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -3721,13 +3721,13 @@ Json::Value Client<T>::Mining::get_miner_list(const Params* params_ptr)
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Mining::revenue_list(const Params* params_ptr)
+simdjson::dom::element Client<T>::Mining::revenue_list(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/mining/payment/list";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -3744,13 +3744,13 @@ Json::Value Client<T>::Mining::revenue_list(const Params* params_ptr)
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Mining::get_extra_bonus_list(const Params* params_ptr)
+simdjson::dom::element Client<T>::Mining::get_extra_bonus_list(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/mining/payment/other";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -3767,13 +3767,13 @@ Json::Value Client<T>::Mining::get_extra_bonus_list(const Params* params_ptr)
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Mining::get_hashrate_resale_list(const Params* params_ptr)
+simdjson::dom::element Client<T>::Mining::get_hashrate_resale_list(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/mining/hash-transfer/config/details/list";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -3790,13 +3790,13 @@ Json::Value Client<T>::Mining::get_hashrate_resale_list(const Params* params_ptr
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Mining::get_hashrate_resale_detail(const Params* params_ptr)
+simdjson::dom::element Client<T>::Mining::get_hashrate_resale_detail(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/mining/hash-transfer/profit/details";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -3813,13 +3813,13 @@ Json::Value Client<T>::Mining::get_hashrate_resale_detail(const Params* params_p
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Mining::make_hashrate_resale_request(const Params* params_ptr)
+simdjson::dom::element Client<T>::Mining::make_hashrate_resale_request(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/mining/hash-transfer/config";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_postreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_postreq(full_path + query);
 
 		return response;
 	}
@@ -3836,13 +3836,13 @@ Json::Value Client<T>::Mining::make_hashrate_resale_request(const Params* params
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Mining::cancel_hashrate_resale_config(const Params* params_ptr)
+simdjson::dom::element Client<T>::Mining::cancel_hashrate_resale_config(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/mining/hash-transfer/config/cancel";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_postreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_postreq(full_path + query);
 
 		return response;
 	}
@@ -3859,13 +3859,13 @@ Json::Value Client<T>::Mining::cancel_hashrate_resale_config(const Params* param
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Mining::statistic_list(const Params* params_ptr)
+simdjson::dom::element Client<T>::Mining::statistic_list(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/mining/statistics/user/status";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -3882,13 +3882,13 @@ Json::Value Client<T>::Mining::statistic_list(const Params* params_ptr)
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::Mining::account_list(const Params* params_ptr)
+simdjson::dom::element Client<T>::Mining::account_list(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/mining/statistics/user/list";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -3960,13 +3960,13 @@ Client<T>::BLVT::~BLVT()
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::BLVT::get_blvt_info(const Params* params_ptr)
+simdjson::dom::element Client<T>::BLVT::get_blvt_info(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/blvt/tokenInfo";
 		std::string query = user_client->_generate_query(params_ptr, 0);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -3983,13 +3983,13 @@ Json::Value Client<T>::BLVT::get_blvt_info(const Params* params_ptr)
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::BLVT::subscribe_blvt(const Params* params_ptr)
+simdjson::dom::element Client<T>::BLVT::subscribe_blvt(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/blvt/subscribe";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_postreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_postreq(full_path + query);
 
 		return response;
 	}
@@ -4006,13 +4006,13 @@ Json::Value Client<T>::BLVT::subscribe_blvt(const Params* params_ptr)
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::BLVT::get_subscribe_blvt_history(const Params* params_ptr)
+simdjson::dom::element Client<T>::BLVT::get_subscribe_blvt_history(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/blvt/subscribe/record";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -4029,13 +4029,13 @@ Json::Value Client<T>::BLVT::get_subscribe_blvt_history(const Params* params_ptr
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::BLVT::redeem_blvt(const Params* params_ptr)
+simdjson::dom::element Client<T>::BLVT::redeem_blvt(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/blvt/redeem";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_postreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_postreq(full_path + query);
 
 		return response;
 	}
@@ -4052,13 +4052,13 @@ Json::Value Client<T>::BLVT::redeem_blvt(const Params* params_ptr)
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::BLVT::get_redeem_blvt_history(const Params* params_ptr)
+simdjson::dom::element Client<T>::BLVT::get_redeem_blvt_history(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/blvt/redeem/record";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -4075,13 +4075,13 @@ Json::Value Client<T>::BLVT::get_redeem_blvt_history(const Params* params_ptr)
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::BLVT::get_blvt_user_limit(const Params* params_ptr)
+simdjson::dom::element Client<T>::BLVT::get_blvt_user_limit(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/blvt/userLimit";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -4152,12 +4152,12 @@ Client<T>::BSwap::~BSwap()
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::BSwap::get_all_swap_pools()
+simdjson::dom::element Client<T>::BSwap::get_all_swap_pools()
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/bswap/pools";
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path);
 
 		return response;
 	}
@@ -4174,13 +4174,13 @@ Json::Value Client<T>::BSwap::get_all_swap_pools()
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::BSwap::get_liquidity_info_pool(const Params* params_ptr)
+simdjson::dom::element Client<T>::BSwap::get_liquidity_info_pool(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/bswap/liquidity";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -4197,13 +4197,13 @@ Json::Value Client<T>::BSwap::get_liquidity_info_pool(const Params* params_ptr)
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::BSwap::add_liquidity(const Params* params_ptr)
+simdjson::dom::element Client<T>::BSwap::add_liquidity(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/bswap/liquidityAdd";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_postreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_postreq(full_path + query);
 
 		return response;
 	}
@@ -4223,13 +4223,13 @@ Json::Value Client<T>::BSwap::add_liquidity(const Params* params_ptr)
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::BSwap::remove_liquidity(const Params* params_ptr)
+simdjson::dom::element Client<T>::BSwap::remove_liquidity(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/bswap/liquidityRemove";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_postreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_postreq(full_path + query);
 
 		return response;
 	}
@@ -4246,13 +4246,13 @@ Json::Value Client<T>::BSwap::remove_liquidity(const Params* params_ptr)
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::BSwap::get_liquidity_ops_record(const Params* params_ptr)
+simdjson::dom::element Client<T>::BSwap::get_liquidity_ops_record(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/bswap/liquidityOps";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -4271,13 +4271,13 @@ Json::Value Client<T>::BSwap::get_liquidity_ops_record(const Params* params_ptr)
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::BSwap::request_quote(const Params* params_ptr)
+simdjson::dom::element Client<T>::BSwap::request_quote(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/bswap/quote";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -4294,13 +4294,13 @@ Json::Value Client<T>::BSwap::request_quote(const Params* params_ptr)
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::BSwap::make_swap(const Params* params_ptr)
+simdjson::dom::element Client<T>::BSwap::make_swap(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/bswap/swap";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_postreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_postreq(full_path + query);
 
 		return response;
 	}
@@ -4317,13 +4317,13 @@ Json::Value Client<T>::BSwap::make_swap(const Params* params_ptr)
 	@return json returned by the request
 */
 template <typename T>
-Json::Value Client<T>::BSwap::get_swap_history(const Params* params_ptr)
+simdjson::dom::element Client<T>::BSwap::get_swap_history(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/sapi/v1/bswap/swap";
 		std::string query = user_client->_generate_query(params_ptr, 1);
-		Json::Value response = (user_client->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (user_client->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -4389,9 +4389,9 @@ void SpotClient::v_init_ws_session()
 std::string SpotClient::v_get_listen_key()
 {
 	std::string full_path = _BASE_REST_SPOT + "/api/v3/userDataStream";
-	Json::Value response = (this->_rest_client)->_postreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_postreq(full_path);
 
-	return response["response"]["listenKey"].asString();
+	return std::string(response["listenKey"].get_string().value());
 }
 
 /**
@@ -4399,10 +4399,10 @@ std::string SpotClient::v_get_listen_key()
 	@param listen_key - the listen_key
 	@return json returned by the request
 */
-Json::Value SpotClient::v_ping_listen_key(const std::string& listen_key)
+simdjson::dom::element SpotClient::v_ping_listen_key(const std::string& listen_key)
 {
 	std::string full_path = _BASE_REST_SPOT + "/api/v3/userDataStream" + "?listenKey=" + listen_key;
-	Json::Value response = listen_key.empty() ? (this->_rest_client)->_putreq(full_path) : (this->_rest_client)->_postreq(full_path);
+	simdjson::dom::element response = listen_key.empty() ? (this->_rest_client)->_putreq(full_path) : (this->_rest_client)->_postreq(full_path);
 
 	return response;
 }
@@ -4412,10 +4412,10 @@ Json::Value SpotClient::v_ping_listen_key(const std::string& listen_key)
 	@param listen_key - the listen_key
 	@return json returned by the request
 */
-Json::Value SpotClient::v_revoke_listen_key(const std::string& listen_key)
+simdjson::dom::element SpotClient::v_revoke_listen_key(const std::string& listen_key)
 {
 	std::string full_path = _BASE_REST_SPOT + "/api/v3/userDataStream" + "?listenKey=" + listen_key;
-	Json::Value response = (this->_rest_client)->_postreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_postreq(full_path);
 
 	return response;
 }
@@ -4430,8 +4430,8 @@ Json::Value SpotClient::v_revoke_listen_key(const std::string& listen_key)
 bool SpotClient::v_ping_client()
 {
 	std::string full_path = _BASE_REST_SPOT + "/api/v3/ping";
-	Json::Value ping_response = (this->_rest_client)->_getreq(full_path)["response"];
-	return (ping_response != Json::nullValue);
+	simdjson::dom::element ping_response = (this->_rest_client)->_getreq(full_path);
+	return !ping_response.is_null();
 }
 
 /**
@@ -4440,7 +4440,7 @@ bool SpotClient::v_ping_client()
 unsigned long long SpotClient::v_exchange_time()
 {
 	std::string full_path = _BASE_REST_SPOT + "/api/v3/time";
-	std::string ex_time = (this->_rest_client)->_getreq(full_path)["response"]["serverTime"].asString();
+	std::string ex_time = std::string((this->_rest_client)->_getreq(full_path)["serverTime"].get_string().value());
 
 	return std::atoll(ex_time.c_str());
 }
@@ -4448,98 +4448,98 @@ unsigned long long SpotClient::v_exchange_time()
 /**
 	CRTP of exchange_info()
 */
-Json::Value SpotClient::v_exchange_info() 
+simdjson::dom::element SpotClient::v_exchange_info() 
 {
 	std::string full_path = _BASE_REST_SPOT + "/api/v1/exchangeInfo";
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of order_book()
 */
-Json::Value SpotClient::v_order_book(const Params* params_ptr)
+simdjson::dom::element SpotClient::v_order_book(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = _BASE_REST_SPOT + "/api/v3/depth" + query;
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of public_trades_recent()
 */
-Json::Value SpotClient::v_public_trades_recent(const Params* params_ptr)
+simdjson::dom::element SpotClient::v_public_trades_recent(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = _BASE_REST_SPOT + "/api/v3/trades" + query;
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of public_trades_historical()
 */
-Json::Value SpotClient::v_public_trades_historical(const Params* params_ptr)
+simdjson::dom::element SpotClient::v_public_trades_historical(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = _BASE_REST_SPOT + "/api/v3/historicalTrades" + query;
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of public_trades_agg()
 */
-Json::Value SpotClient::v_public_trades_agg(const Params* params_ptr)
+simdjson::dom::element SpotClient::v_public_trades_agg(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = _BASE_REST_SPOT + "/api/v3/aggTrades" + query;
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of klines()
 */
-Json::Value SpotClient::v_klines(const Params* params_ptr)
+simdjson::dom::element SpotClient::v_klines(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = _BASE_REST_SPOT + "/api/v3/klines" + query;
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of daily_ticker_stats()
 */
-Json::Value SpotClient::v_daily_ticker_stats(const Params* params_ptr)
+simdjson::dom::element SpotClient::v_daily_ticker_stats(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = _BASE_REST_SPOT + "/api/v3/ticker/24hr" + query;
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of get_ticker()
 */
-Json::Value SpotClient::v_get_ticker(const Params* params_ptr)
+simdjson::dom::element SpotClient::v_get_ticker(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = _BASE_REST_SPOT + "/api/v3/ticker/price" + query;
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of get_order_book_ticker()
 */
-Json::Value SpotClient::v_get_order_book_ticker(const Params* params_ptr)
+simdjson::dom::element SpotClient::v_get_order_book_ticker(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = _BASE_REST_SPOT + "/api/v3/ticker/bookTicker" + query;
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
@@ -4555,11 +4555,11 @@ Json::Value SpotClient::v_get_order_book_ticker(const Params* params_ptr)
 /**
 	CRTP of test_new_order()
 */
-Json::Value SpotClient::v_test_new_order(const Params* params_ptr)
+simdjson::dom::element SpotClient::v_test_new_order(const Params* params_ptr)
 {
 	std::string full_path = _BASE_REST_SPOT + "/api/v3/order/test";
 	std::string query = this->_generate_query(params_ptr, 1);
-	Json::Value response = (this->_rest_client)->_postreq(full_path + query);
+	simdjson::dom::element response = (this->_rest_client)->_postreq(full_path + query);
 
 	return response;
 }
@@ -4567,11 +4567,11 @@ Json::Value SpotClient::v_test_new_order(const Params* params_ptr)
 /**
 	CRTP of new_order()
 */
-Json::Value SpotClient::v_new_order(const Params* params_ptr)
+simdjson::dom::element SpotClient::v_new_order(const Params* params_ptr)
 {
 	std::string full_path = _BASE_REST_SPOT + "/api/v3/order";
 	std::string query = this->_generate_query(params_ptr, 1);
-	Json::Value response = (this->_rest_client)->_postreq(full_path + query);
+	simdjson::dom::element response = (this->_rest_client)->_postreq(full_path + query);
 
 	return response;
 }
@@ -4579,11 +4579,11 @@ Json::Value SpotClient::v_new_order(const Params* params_ptr)
 /**
 	CRTP of cancel_order()
 */
-Json::Value SpotClient::v_cancel_order(const Params* params_ptr)
+simdjson::dom::element SpotClient::v_cancel_order(const Params* params_ptr)
 {
 	std::string full_path = _BASE_REST_SPOT + "/api/v3/order";
 	std::string query = this->_generate_query(params_ptr, 1);
-	Json::Value response = (this->_rest_client)->_deletereq(full_path + query);
+	simdjson::dom::element response = (this->_rest_client)->_deletereq(full_path + query);
 
 	return response;
 }
@@ -4591,11 +4591,11 @@ Json::Value SpotClient::v_cancel_order(const Params* params_ptr)
 /**
 	CRTP of cancel_all_orders()
 */
-Json::Value SpotClient::v_cancel_all_orders(const Params* params_ptr)
+simdjson::dom::element SpotClient::v_cancel_all_orders(const Params* params_ptr)
 {
 	std::string full_path = _BASE_REST_SPOT + "api/v3/openOrders";
 	std::string query = this->_generate_query(params_ptr, 1);
-	Json::Value response = (this->_rest_client)->_deletereq(full_path + query);
+	simdjson::dom::element response = (this->_rest_client)->_deletereq(full_path + query);
 
 	return response;
 }
@@ -4603,11 +4603,11 @@ Json::Value SpotClient::v_cancel_all_orders(const Params* params_ptr)
 /**
 	CRTP of query_order()
 */
-Json::Value SpotClient::v_query_order(const Params* params_ptr)
+simdjson::dom::element SpotClient::v_query_order(const Params* params_ptr)
 {
 	std::string full_path = _BASE_REST_SPOT + "/api/v3/order";
 	std::string query = this->_generate_query(params_ptr, 1);
-	Json::Value response = (this->_rest_client)->_getreq(full_path + query);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path + query);
 
 	return response;
 }
@@ -4615,11 +4615,11 @@ Json::Value SpotClient::v_query_order(const Params* params_ptr)
 /**
 	CRTP of open_orders()
 */
-Json::Value SpotClient::v_open_orders(const Params* params_ptr)
+simdjson::dom::element SpotClient::v_open_orders(const Params* params_ptr)
 {
 	std::string full_path = _BASE_REST_SPOT + "/api/v3/openOrders";
 	std::string query = this->_generate_query(params_ptr, 1);
-	Json::Value response = (this->_rest_client)->_getreq(full_path + query);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path + query);
 
 	return response;
 }
@@ -4627,11 +4627,11 @@ Json::Value SpotClient::v_open_orders(const Params* params_ptr)
 /**
 	CRTP of all_orders()
 */
-Json::Value SpotClient::v_all_orders(const Params* params_ptr)
+simdjson::dom::element SpotClient::v_all_orders(const Params* params_ptr)
 {
 	std::string full_path = _BASE_REST_SPOT + "/api/v3/allOrders";
 	std::string query = this->_generate_query(params_ptr, 1);
-	Json::Value response = (this->_rest_client)->_getreq(full_path + query);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path + query);
 
 	return response;
 }
@@ -4639,11 +4639,11 @@ Json::Value SpotClient::v_all_orders(const Params* params_ptr)
 /**
 	CRTP of account_info()
 */
-Json::Value SpotClient::v_account_info(const Params* params_ptr)
+simdjson::dom::element SpotClient::v_account_info(const Params* params_ptr)
 {
 	std::string full_path = _BASE_REST_SPOT + "/api/v3/account";
 	std::string query = this->_generate_query(params_ptr, 1);
-	Json::Value response = (this->_rest_client)->_getreq(full_path + query);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path + query);
 
 	return response;
 }
@@ -4651,11 +4651,11 @@ Json::Value SpotClient::v_account_info(const Params* params_ptr)
 /**
 	CRTP of account_trades_list()
 */
-Json::Value SpotClient::v_account_trades_list(const Params* params_ptr)
+simdjson::dom::element SpotClient::v_account_trades_list(const Params* params_ptr)
 {
 	std::string full_path = _BASE_REST_SPOT + "/api/v3/myTrades";
 	std::string query = this->_generate_query(params_ptr, 1);
-	Json::Value response = (this->_rest_client)->_getreq(full_path + query);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path + query);
 
 	return response;
 }
@@ -4669,13 +4669,13 @@ Json::Value SpotClient::v_account_trades_list(const Params* params_ptr)
 	@param params_ptr - a pointer to the request Params object
 	@return json returned by the request
 */
-Json::Value SpotClient::oco_new_order(const Params* params_ptr)
+simdjson::dom::element SpotClient::oco_new_order(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/api/v3/order/oco";
 		std::string query = this->_generate_query(params_ptr, 1);
-		Json::Value response = (this->_rest_client)->_postreq(full_path + query);
+		simdjson::dom::element response = (this->_rest_client)->_postreq(full_path + query);
 
 		return response;
 	}
@@ -4692,13 +4692,13 @@ Json::Value SpotClient::oco_new_order(const Params* params_ptr)
 	@param params_ptr - a pointer to the request Params object
 	@return json returned by the request
 */
-Json::Value SpotClient::oco_cancel_order(const Params* params_ptr)
+simdjson::dom::element SpotClient::oco_cancel_order(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/api/v3/orderList";
 		std::string query = this->_generate_query(params_ptr, 1);
-		Json::Value response = (this->_rest_client)->_deletereq(full_path + query);
+		simdjson::dom::element response = (this->_rest_client)->_deletereq(full_path + query);
 
 		return response;
 	}
@@ -4714,13 +4714,13 @@ Json::Value SpotClient::oco_cancel_order(const Params* params_ptr)
 	@param params_ptr - a pointer to the request Params object
 	@return json returned by the request
 */
-Json::Value SpotClient::oco_query_order(const Params* params_ptr)
+simdjson::dom::element SpotClient::oco_query_order(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/api/v3/orderList";
 		std::string query = this->_generate_query(params_ptr, 1);
-		Json::Value response = (this->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (this->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -4736,13 +4736,13 @@ Json::Value SpotClient::oco_query_order(const Params* params_ptr)
 	@param params_ptr - a pointer to the request Params object
 	@return json returned by the request
 */
-Json::Value SpotClient::oco_all_orders(const Params* params_ptr)
+simdjson::dom::element SpotClient::oco_all_orders(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/api/v3/allOrderList";
 		std::string query = this->_generate_query(params_ptr, 1);
-		Json::Value response = (this->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (this->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -4758,13 +4758,13 @@ Json::Value SpotClient::oco_all_orders(const Params* params_ptr)
 	@param params_ptr - a pointer to the request Params object
 	@return json returned by the request
 */
-Json::Value SpotClient::oco_open_orders(const Params* params_ptr)
+simdjson::dom::element SpotClient::oco_open_orders(const Params* params_ptr)
 {
 	try
 	{
 		std::string full_path = _BASE_REST_SPOT + "/api/v3/openOrderList";
 		std::string query = this->_generate_query(params_ptr, 1);
-		Json::Value response = (this->_rest_client)->_getreq(full_path + query);
+		simdjson::dom::element response = (this->_rest_client)->_getreq(full_path + query);
 
 		return response;
 	}
@@ -4850,55 +4850,55 @@ bool FuturesClient<CT>::v_ping_client() { return static_cast<CT*>(this)->v__ping
 	CRTP of exchange_info()
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::v_exchange_info() { return static_cast<CT*>(this)->v__exchange_info(); }
+simdjson::dom::element FuturesClient<CT>::v_exchange_info() { return static_cast<CT*>(this)->v__exchange_info(); }
 
 /**
 	CRTP of order_book()
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::v_order_book(const Params* params_ptr) { return static_cast<CT*>(this)->v__order_book(params_ptr); }
+simdjson::dom::element FuturesClient<CT>::v_order_book(const Params* params_ptr) { return static_cast<CT*>(this)->v__order_book(params_ptr); }
 
 /**
 	CRTP of trades_recent()
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::v_public_trades_recent(const Params* params_ptr) { return static_cast<CT*>(this)->v__public_trades_recent(params_ptr); }
+simdjson::dom::element FuturesClient<CT>::v_public_trades_recent(const Params* params_ptr) { return static_cast<CT*>(this)->v__public_trades_recent(params_ptr); }
 
 /**
 	CRTP of public_trades_historical()
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::v_public_trades_historical(const Params* params_ptr) { return static_cast<CT*>(this)->v__public_trades_historical(params_ptr); }
+simdjson::dom::element FuturesClient<CT>::v_public_trades_historical(const Params* params_ptr) { return static_cast<CT*>(this)->v__public_trades_historical(params_ptr); }
 
 /**
 	CRTP of public_trades_agg()
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::v_public_trades_agg(const Params* params_ptr) { return static_cast<CT*>(this)->v__public_trades_agg(params_ptr); }
+simdjson::dom::element FuturesClient<CT>::v_public_trades_agg(const Params* params_ptr) { return static_cast<CT*>(this)->v__public_trades_agg(params_ptr); }
 
 /**
 	CRTP of klines()
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::v_klines(const Params* params_ptr) { return static_cast<CT*>(this)->v__klines(params_ptr); }
+simdjson::dom::element FuturesClient<CT>::v_klines(const Params* params_ptr) { return static_cast<CT*>(this)->v__klines(params_ptr); }
 
 /**
 	CRTP of daily_ticker_stats()
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::v_daily_ticker_stats(const Params* params_ptr) { return static_cast<CT*>(this)->v__daily_ticker_stats(params_ptr); }
+simdjson::dom::element FuturesClient<CT>::v_daily_ticker_stats(const Params* params_ptr) { return static_cast<CT*>(this)->v__daily_ticker_stats(params_ptr); }
 
 /**
 	CRTP of get_ticker()
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::v_get_ticker(const Params* params_ptr) { return static_cast<CT*>(this)->v__get_ticker(params_ptr); }
+simdjson::dom::element FuturesClient<CT>::v_get_ticker(const Params* params_ptr) { return static_cast<CT*>(this)->v__get_ticker(params_ptr); }
 
 /**
 	CRTP of get_order_book_ticker()
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::v_get_order_book_ticker(const Params* params_ptr) { return static_cast<CT*>(this)->v__get_order_book_ticker(params_ptr); }
+simdjson::dom::element FuturesClient<CT>::v_get_order_book_ticker(const Params* params_ptr) { return static_cast<CT*>(this)->v__get_order_book_ticker(params_ptr); }
 
 //  ------------------------------ End | FuturesClient CRTP methods - Market Data Implementations
 
@@ -4911,7 +4911,7 @@ Json::Value FuturesClient<CT>::v_get_order_book_ticker(const Params* params_ptr)
 	@return json returned by the request
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::mark_price(const Params* params_ptr) 
+simdjson::dom::element FuturesClient<CT>::mark_price(const Params* params_ptr) 
 { 
 	try
 	{
@@ -4930,7 +4930,7 @@ Json::Value FuturesClient<CT>::mark_price(const Params* params_ptr)
 	@return json returned by the request
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::open_interest(const Params* params_ptr) 
+simdjson::dom::element FuturesClient<CT>::open_interest(const Params* params_ptr) 
 {
 	try
 	{
@@ -4949,7 +4949,7 @@ Json::Value FuturesClient<CT>::open_interest(const Params* params_ptr)
 	@return json returned by the request
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::composite_index_symbol_info(const Params* params_ptr)
+simdjson::dom::element FuturesClient<CT>::composite_index_symbol_info(const Params* params_ptr)
 {
 	try
 	{
@@ -4970,7 +4970,7 @@ Json::Value FuturesClient<CT>::composite_index_symbol_info(const Params* params_
 	@return json returned by the request
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::continues_klines(const Params* params_ptr) 
+simdjson::dom::element FuturesClient<CT>::continues_klines(const Params* params_ptr) 
 {
 	try
 	{
@@ -4989,7 +4989,7 @@ Json::Value FuturesClient<CT>::continues_klines(const Params* params_ptr)
 	@return json returned by the request
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::index_klines(const Params* params_ptr)
+simdjson::dom::element FuturesClient<CT>::index_klines(const Params* params_ptr)
 {
 	try
 	{
@@ -5008,7 +5008,7 @@ Json::Value FuturesClient<CT>::index_klines(const Params* params_ptr)
 	@return json returned by the request
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::mark_klines(const Params* params_ptr)
+simdjson::dom::element FuturesClient<CT>::mark_klines(const Params* params_ptr)
 {
 	try
 	{
@@ -5030,7 +5030,7 @@ Json::Value FuturesClient<CT>::mark_klines(const Params* params_ptr)
 	@return json returned by the request
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::funding_rate_history(const Params* params_ptr)
+simdjson::dom::element FuturesClient<CT>::funding_rate_history(const Params* params_ptr)
 {
 	try
 	{
@@ -5050,7 +5050,7 @@ Json::Value FuturesClient<CT>::funding_rate_history(const Params* params_ptr)
 	@return json returned by the request
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::change_multiasset_margin_mode(const Params* params_ptr)
+simdjson::dom::element FuturesClient<CT>::change_multiasset_margin_mode(const Params* params_ptr)
 {
 	try
 	{
@@ -5070,7 +5070,7 @@ Json::Value FuturesClient<CT>::change_multiasset_margin_mode(const Params* param
 	@return json returned by the request
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::check_multiasset_margin_mode(const Params* params_ptr)
+simdjson::dom::element FuturesClient<CT>::check_multiasset_margin_mode(const Params* params_ptr)
 {
 	try
 	{
@@ -5094,7 +5094,7 @@ Json::Value FuturesClient<CT>::check_multiasset_margin_mode(const Params* params
 	CRTP of test_new_order()
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::v_test_new_order(const Params* params_ptr)
+simdjson::dom::element FuturesClient<CT>::v_test_new_order(const Params* params_ptr)
 { 
 	std::string error_msg{ "use_tesnet_instead" };
 	CustomException e(error_msg);
@@ -5106,49 +5106,49 @@ Json::Value FuturesClient<CT>::v_test_new_order(const Params* params_ptr)
 	CRTP of new_order()
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::v_new_order(const Params* params_ptr) { return static_cast<CT*>(this)->v__new_order(params_ptr); }
+simdjson::dom::element FuturesClient<CT>::v_new_order(const Params* params_ptr) { return static_cast<CT*>(this)->v__new_order(params_ptr); }
 
 /**
 	CRTP of cancel_order()
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::v_cancel_order(const Params* params_ptr) { return static_cast<CT*>(this)->v__cancel_order(params_ptr); }
+simdjson::dom::element FuturesClient<CT>::v_cancel_order(const Params* params_ptr) { return static_cast<CT*>(this)->v__cancel_order(params_ptr); }
 
 /**
 	CRTP of cancel_all_orders()
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::v_cancel_all_orders(const Params* params_ptr) { return static_cast<CT*>(this)->v__cancel_all_orders(params_ptr); }
+simdjson::dom::element FuturesClient<CT>::v_cancel_all_orders(const Params* params_ptr) { return static_cast<CT*>(this)->v__cancel_all_orders(params_ptr); }
 
 /**
 	CRTP of query_order()
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::v_query_order(const Params* params_ptr) { return static_cast<CT*>(this)->v__query_order(params_ptr); }
+simdjson::dom::element FuturesClient<CT>::v_query_order(const Params* params_ptr) { return static_cast<CT*>(this)->v__query_order(params_ptr); }
 
 /**
 	CRTP of open_orders()
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::v_open_orders(const Params* params_ptr) { return static_cast<CT*>(this)->v__open_orders(params_ptr); }
+simdjson::dom::element FuturesClient<CT>::v_open_orders(const Params* params_ptr) { return static_cast<CT*>(this)->v__open_orders(params_ptr); }
 
 /**
 	CRTP of all_orders()
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::v_all_orders(const Params* params_ptr) { return static_cast<CT*>(this)->v__all_orders(params_ptr); }
+simdjson::dom::element FuturesClient<CT>::v_all_orders(const Params* params_ptr) { return static_cast<CT*>(this)->v__all_orders(params_ptr); }
 
 /**
 	CRTP of account_info()
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::v_account_info(const Params* params_ptr) { return static_cast<CT*>(this)->v__account_info(params_ptr); }
+simdjson::dom::element FuturesClient<CT>::v_account_info(const Params* params_ptr) { return static_cast<CT*>(this)->v__account_info(params_ptr); }
 
 /**
 	CRTP of account_trades_list()
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::v_account_trades_list(const Params* params_ptr) { return static_cast<CT*>(this)->v__account_trades_list(params_ptr); }
+simdjson::dom::element FuturesClient<CT>::v_account_trades_list(const Params* params_ptr) { return static_cast<CT*>(this)->v__account_trades_list(params_ptr); }
 
 // -- Up to 'FuturesClient' (this) Level
 
@@ -5158,7 +5158,7 @@ Json::Value FuturesClient<CT>::v_account_trades_list(const Params* params_ptr) {
 	@return json returned by the request
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::change_position_mode(const Params* params_ptr) 
+simdjson::dom::element FuturesClient<CT>::change_position_mode(const Params* params_ptr) 
 {
 	try
 	{
@@ -5177,7 +5177,7 @@ Json::Value FuturesClient<CT>::change_position_mode(const Params* params_ptr)
 	@return json returned by the request
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::get_position_mode(const Params* params_ptr)
+simdjson::dom::element FuturesClient<CT>::get_position_mode(const Params* params_ptr)
 {
 	try
 	{
@@ -5196,7 +5196,7 @@ Json::Value FuturesClient<CT>::get_position_mode(const Params* params_ptr)
 	@return json returned by the request
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::batch_orders(const Params* params_ptr) 
+simdjson::dom::element FuturesClient<CT>::batch_orders(const Params* params_ptr) 
 {
 	try
 	{
@@ -5215,7 +5215,7 @@ Json::Value FuturesClient<CT>::batch_orders(const Params* params_ptr)
 	@return json returned by the request
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::cancel_batch_orders(const Params* params_ptr)
+simdjson::dom::element FuturesClient<CT>::cancel_batch_orders(const Params* params_ptr)
 {
 	try
 	{
@@ -5245,7 +5245,7 @@ Json::Value FuturesClient<CT>::cancel_batch_orders(const Params* params_ptr)
 	@return json returned by the request
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::cancel_all_orders_timer(const Params* params_ptr)
+simdjson::dom::element FuturesClient<CT>::cancel_all_orders_timer(const Params* params_ptr)
 {
 	try
 	{
@@ -5264,7 +5264,7 @@ Json::Value FuturesClient<CT>::cancel_all_orders_timer(const Params* params_ptr)
 	@return json returned by the request
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::query_open_order(const Params* params_ptr)
+simdjson::dom::element FuturesClient<CT>::query_open_order(const Params* params_ptr)
 {
 	try
 	{
@@ -5283,7 +5283,7 @@ Json::Value FuturesClient<CT>::query_open_order(const Params* params_ptr)
 	@return json returned by the request
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::account_balances(const Params* params_ptr)
+simdjson::dom::element FuturesClient<CT>::account_balances(const Params* params_ptr)
 {
 	try
 	{
@@ -5302,7 +5302,7 @@ Json::Value FuturesClient<CT>::account_balances(const Params* params_ptr)
 	@return json returned by the request
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::change_leverage(const Params* params_ptr) 
+simdjson::dom::element FuturesClient<CT>::change_leverage(const Params* params_ptr) 
 {
 	try
 	{
@@ -5321,7 +5321,7 @@ Json::Value FuturesClient<CT>::change_leverage(const Params* params_ptr)
 	@return json returned by the request
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::change_margin_type(const Params* params_ptr)
+simdjson::dom::element FuturesClient<CT>::change_margin_type(const Params* params_ptr)
 {
 	try
 	{
@@ -5340,7 +5340,7 @@ Json::Value FuturesClient<CT>::change_margin_type(const Params* params_ptr)
 	@return json returned by the request
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::change_position_margin(const Params* params_ptr) 
+simdjson::dom::element FuturesClient<CT>::change_position_margin(const Params* params_ptr) 
 {
 	try
 	{
@@ -5359,7 +5359,7 @@ Json::Value FuturesClient<CT>::change_position_margin(const Params* params_ptr)
 	@return json returned by the request
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::change_position_margin_history(const Params* params_ptr) 
+simdjson::dom::element FuturesClient<CT>::change_position_margin_history(const Params* params_ptr) 
 {
 	try
 	{
@@ -5378,7 +5378,7 @@ Json::Value FuturesClient<CT>::change_position_margin_history(const Params* para
 	@return json returned by the request
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::position_info(const Params* params_ptr)
+simdjson::dom::element FuturesClient<CT>::position_info(const Params* params_ptr)
 {
 	try
 	{
@@ -5397,7 +5397,7 @@ Json::Value FuturesClient<CT>::position_info(const Params* params_ptr)
 	@return json returned by the request
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::get_income_history(const Params* params_ptr)
+simdjson::dom::element FuturesClient<CT>::get_income_history(const Params* params_ptr)
 {
 	try
 	{
@@ -5416,7 +5416,7 @@ Json::Value FuturesClient<CT>::get_income_history(const Params* params_ptr)
 	@return json returned by the request
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::get_leverage_bracket(const Params* params_ptr) 
+simdjson::dom::element FuturesClient<CT>::get_leverage_bracket(const Params* params_ptr) 
 {
 	try
 	{
@@ -5435,7 +5435,7 @@ Json::Value FuturesClient<CT>::get_leverage_bracket(const Params* params_ptr)
 	@return json returned by the request
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::users_force_orders(const Params* params_ptr)
+simdjson::dom::element FuturesClient<CT>::users_force_orders(const Params* params_ptr)
 {
 	try
 	{
@@ -5463,7 +5463,7 @@ Json::Value FuturesClient<CT>::users_force_orders(const Params* params_ptr)
 	@return json returned by the request
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::pos_adl_quantile_est(const Params* params_ptr)
+simdjson::dom::element FuturesClient<CT>::pos_adl_quantile_est(const Params* params_ptr)
 {
 	try
 	{
@@ -5482,7 +5482,7 @@ Json::Value FuturesClient<CT>::pos_adl_quantile_est(const Params* params_ptr)
 	@return json returned by the request
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::get_user_comission_rate(const Params* params_ptr)
+simdjson::dom::element FuturesClient<CT>::get_user_comission_rate(const Params* params_ptr)
 {
 	try
 	{
@@ -5501,7 +5501,7 @@ Json::Value FuturesClient<CT>::get_user_comission_rate(const Params* params_ptr)
 	@return json returned by the request
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::api_quant_trading_rules(const Params* params_ptr)
+simdjson::dom::element FuturesClient<CT>::api_quant_trading_rules(const Params* params_ptr)
 {
 	try
 	{
@@ -5520,7 +5520,7 @@ Json::Value FuturesClient<CT>::api_quant_trading_rules(const Params* params_ptr)
 	@return json returned by the request
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::get_blvt_kline_history(const Params* params_ptr)
+simdjson::dom::element FuturesClient<CT>::get_blvt_kline_history(const Params* params_ptr)
 {
 	try
 	{
@@ -5539,7 +5539,7 @@ Json::Value FuturesClient<CT>::get_blvt_kline_history(const Params* params_ptr)
 	@return json returned by the request
 */
 template<typename CT>
-Json::Value FuturesClient<CT>::get_composite_index_symbol_info(const Params* params_ptr)
+simdjson::dom::element FuturesClient<CT>::get_composite_index_symbol_info(const Params* params_ptr)
 {
 	try
 	{
@@ -5567,13 +5567,13 @@ std::string FuturesClient<CT>::v_get_listen_key() { return static_cast<CT*>(this
 	CRTP of ping_listen_key()
 */
 template <typename CT>
-Json::Value FuturesClient<CT>::v_ping_listen_key(const std::string& listen_key) { return static_cast<CT*>(this)->v__ping_listen_key(); }
+simdjson::dom::element FuturesClient<CT>::v_ping_listen_key(const std::string& listen_key) { return static_cast<CT*>(this)->v__ping_listen_key(); }
 
 /**
 	CRTP of revoke_listen_key()
 */
 template <typename CT>
-Json::Value FuturesClient<CT>::v_revoke_listen_key(const std::string& listen_key) { return static_cast<CT*>(this)->v__revoke_listen_key(); }
+simdjson::dom::element FuturesClient<CT>::v_revoke_listen_key(const std::string& listen_key) { return static_cast<CT*>(this)->v__revoke_listen_key(); }
 
 //  ------------------------------ End | FuturesClient Global + CRTP methods - WS Streams 
 
@@ -5586,14 +5586,14 @@ Json::Value FuturesClient<CT>::v_revoke_listen_key(const std::string& listen_key
 	@return json returned by the request
 */
 template <typename CT>
-Json::Value FuturesClient<CT>::open_interest_stats(const Params* params_ptr)
+simdjson::dom::element FuturesClient<CT>::open_interest_stats(const Params* params_ptr)
 {
 	try
 	{
 		std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 		std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 		full_path += "/futures/data/openInterestHist" + query;
-		Json::Value response = (this->_rest_client)->_getreq(full_path);
+		simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 		return response;
 	}
 	catch (ClientException e)
@@ -5610,7 +5610,7 @@ Json::Value FuturesClient<CT>::open_interest_stats(const Params* params_ptr)
 	@return json returned by the request
 */
 template <typename CT>
-Json::Value FuturesClient<CT>::top_long_short_ratio(const Params* params_ptr, bool accounts)
+simdjson::dom::element FuturesClient<CT>::top_long_short_ratio(const Params* params_ptr, bool accounts)
 {
 	try
 	{
@@ -5618,7 +5618,7 @@ Json::Value FuturesClient<CT>::top_long_short_ratio(const Params* params_ptr, bo
 		std::string endpoint = accounts ? "/futures/data/topLongShortAccountRatio" : "/futures/data/topLongShortPositionRatio";
 		std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 		full_path += (endpoint + query);
-		Json::Value response = (this->_rest_client)->_getreq(full_path);
+		simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 		return response;
 	}
 	catch (ClientException e)
@@ -5637,14 +5637,14 @@ Json::Value FuturesClient<CT>::top_long_short_ratio(const Params* params_ptr, bo
 	@return json returned by the request
 */
 template <typename CT>
-Json::Value FuturesClient<CT>::global_long_short_ratio(const Params* params_ptr)
+simdjson::dom::element FuturesClient<CT>::global_long_short_ratio(const Params* params_ptr)
 {
 	try
 	{
 		std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 		std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 		full_path += ("/futures/data/globalLongShortAccountRatio" + query);
-		Json::Value response = (this->_rest_client)->_getreq(full_path);
+		simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 		return response;
 	}
 	catch (ClientException e)
@@ -5663,14 +5663,14 @@ Json::Value FuturesClient<CT>::global_long_short_ratio(const Params* params_ptr)
 	@return json returned by the request
 */
 template <typename CT>
-Json::Value FuturesClient<CT>::taker_long_short_ratio(const Params* params_ptr)
+simdjson::dom::element FuturesClient<CT>::taker_long_short_ratio(const Params* params_ptr)
 {
 	try
 	{
 		std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 		std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 		full_path += ("/futures/data/takerlongshortRatio" + query);
-		Json::Value response = (this->_rest_client)->_getreq(full_path);
+		simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 		return response;
 	}
 	catch (ClientException e)
@@ -5746,8 +5746,8 @@ bool FuturesClientUSDT::v__ping_client()
 {
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += "/fapi/v1/ping";
-	Json::Value ping_response = (this->_rest_client)->_getreq(full_path)["response"];
-	return (ping_response != Json::nullValue);
+	simdjson::dom::element ping_response = (this->_rest_client)->_getreq(full_path);
+	return (ping_response.is_null());
 }
 
 /**
@@ -5757,7 +5757,7 @@ unsigned long long FuturesClientUSDT::v__exchange_time()
 {
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += "/fapi/v1/time";
-	std::string ex_time = (this->_rest_client)->_getreq(full_path)["response"]["serverTime"].asString();
+	std::string ex_time = std::string((this->_rest_client)->_getreq(full_path)["serverTime"].get_string().value());
 
 	return std::atoll(ex_time.c_str());
 }
@@ -5765,107 +5765,107 @@ unsigned long long FuturesClientUSDT::v__exchange_time()
 /**
 	CRTP of v_exchange_info()
 */
-Json::Value FuturesClientUSDT::v__exchange_info()
+simdjson::dom::element FuturesClientUSDT::v__exchange_info()
 {
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += "/fapi/v1/exchangeInfo";
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of v_order_book()
 */
-Json::Value FuturesClientUSDT::v__order_book(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v__order_book(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/depth" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of v_public_trades_recent()
 */
-Json::Value FuturesClientUSDT::v__public_trades_recent(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v__public_trades_recent(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/trades" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of v_public_trades_historical()
 */
-Json::Value FuturesClientUSDT::v__public_trades_historical(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v__public_trades_historical(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/historicalTrades" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of v_public_trades_agg()
 */
-Json::Value FuturesClientUSDT::v__public_trades_agg(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v__public_trades_agg(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/aggTrades" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of v_klines()
 */
-Json::Value FuturesClientUSDT::v__klines(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v__klines(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/klines" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of v_daily_ticker_stats()
 */
-Json::Value FuturesClientUSDT::v__daily_ticker_stats(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v__daily_ticker_stats(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/ticker/24hr" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of v_get_ticker()
 */
-Json::Value FuturesClientUSDT::v__get_ticker(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v__get_ticker(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/ticker/price" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of v_get_order_book_ticker()
 */
-Json::Value FuturesClientUSDT::v__get_order_book_ticker(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v__get_order_book_ticker(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/ticker/bookTicker" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
@@ -5877,36 +5877,36 @@ Json::Value FuturesClientUSDT::v__get_order_book_ticker(const Params* params_ptr
 /**
 	CRTP of mark_price()
 */
-Json::Value FuturesClientUSDT::v_mark_price(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v_mark_price(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/premiumIndex" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of open_interest()
 */
-Json::Value FuturesClientUSDT::v_open_interest(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v_open_interest(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/openInterest" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of composite_index_symbol_info()
 */
-Json::Value FuturesClientUSDT::v_composite_index_symbol_info(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v_composite_index_symbol_info(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/indexInfo" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
@@ -5915,36 +5915,36 @@ Json::Value FuturesClientUSDT::v_composite_index_symbol_info(const Params* param
 /**
 	CRTP of continues_klines()
 */
-Json::Value FuturesClientUSDT::v_continues_klines(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v_continues_klines(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/continuousKlines" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of index_klines()
 */
-Json::Value FuturesClientUSDT::v_index_klines(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v_index_klines(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/indexPriceKlines" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of mark_klines()
 */
-Json::Value FuturesClientUSDT::v_mark_klines(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v_mark_klines(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/markPriceKlines" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
@@ -5954,36 +5954,36 @@ Json::Value FuturesClientUSDT::v_mark_klines(const Params* params_ptr)
 /**
 	CRTP of funding_rate_history() - Unique for USDT margined client
 */
-Json::Value FuturesClientUSDT::v_funding_rate_history(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v_funding_rate_history(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/fundingRate" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of change_multiasset_margin_mode() - Unique for USDT margined client
 */
-Json::Value FuturesClientUSDT::v_change_multiasset_margin_mode(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v_change_multiasset_margin_mode(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/multiAssetsMargin" + query);
-	Json::Value response = (this->_rest_client)->_postreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_postreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of check_multiasset_margin_mode() - Unique for USDT margined client
 */
-Json::Value FuturesClientUSDT::v_check_multiasset_margin_mode(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v_check_multiasset_margin_mode(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/multiAssetsMargin" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
@@ -5997,12 +5997,12 @@ Json::Value FuturesClientUSDT::v_check_multiasset_margin_mode(const Params* para
 /**
 	CRTP of v_new_order()
 */
-Json::Value FuturesClientUSDT::v__new_order(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v__new_order(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/order" + query);
-	Json::Value response = (this->_rest_client)->_postreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_postreq(full_path);
 
 	return response;
 }
@@ -6010,12 +6010,12 @@ Json::Value FuturesClientUSDT::v__new_order(const Params* params_ptr)
 /**
 	CRTP of v_cancel_order()
 */
-Json::Value FuturesClientUSDT::v__cancel_order(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v__cancel_order(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += "/fapi/v1/order";
-	Json::Value response = (this->_rest_client)->_deletereq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_deletereq(full_path);
 
 	return response;
 }
@@ -6023,12 +6023,12 @@ Json::Value FuturesClientUSDT::v__cancel_order(const Params* params_ptr)
 /**
 	CRTP of v_cancel_all_orders()
 */
-Json::Value FuturesClientUSDT::v__cancel_all_orders(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v__cancel_all_orders(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += "/fapi/v1/allOpenOrders";
-	Json::Value response = (this->_rest_client)->_deletereq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_deletereq(full_path);
 
 	return response;
 }
@@ -6036,12 +6036,12 @@ Json::Value FuturesClientUSDT::v__cancel_all_orders(const Params* params_ptr)
 /**
 	CRTP of v_query_order()
 */
-Json::Value FuturesClientUSDT::v__query_order(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v__query_order(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/order" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 
 	return response;
 }
@@ -6049,13 +6049,13 @@ Json::Value FuturesClientUSDT::v__query_order(const Params* params_ptr)
 /**
 	CRTP of v_open_orders()
 */
-Json::Value FuturesClientUSDT::v__open_orders(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v__open_orders(const Params* params_ptr)
 {
 
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/openOrders" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 
 	return response;
 }
@@ -6063,12 +6063,12 @@ Json::Value FuturesClientUSDT::v__open_orders(const Params* params_ptr)
 /**
 	CRTP of v_all_orders()
 */
-Json::Value FuturesClientUSDT::v__all_orders(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v__all_orders(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/allOrders" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 
 	return response;
 }
@@ -6076,12 +6076,12 @@ Json::Value FuturesClientUSDT::v__all_orders(const Params* params_ptr)
 /**
 	CRTP of v_account_info()
 */
-Json::Value FuturesClientUSDT::v__account_info(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v__account_info(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v2/account" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 
 	return response;
 }
@@ -6089,12 +6089,12 @@ Json::Value FuturesClientUSDT::v__account_info(const Params* params_ptr)
 /**
 	CRTP of v_account_trades_list()
 */
-Json::Value FuturesClientUSDT::v__account_trades_list(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v__account_trades_list(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/userTrades" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 
 	return response;
 }
@@ -6104,12 +6104,12 @@ Json::Value FuturesClientUSDT::v__account_trades_list(const Params* params_ptr)
 /**
 	CRTP of change_position_mode()
 */
-Json::Value FuturesClientUSDT::v_change_position_mode(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v_change_position_mode(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/positionSide/dual" + query);
-	Json::Value response = (this->_rest_client)->_postreq(full_path); // should be spot?
+	simdjson::dom::element response = (this->_rest_client)->_postreq(full_path); // should be spot?
 
 	return response;
 }
@@ -6117,12 +6117,12 @@ Json::Value FuturesClientUSDT::v_change_position_mode(const Params* params_ptr)
 /**
 	CRTP of get_position_mode()
 */
-Json::Value FuturesClientUSDT::v_get_position_mode(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v_get_position_mode(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/positionSide/dual" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path); // should be spot?
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path); // should be spot?
 
 	return response;
 }
@@ -6130,12 +6130,12 @@ Json::Value FuturesClientUSDT::v_get_position_mode(const Params* params_ptr)
 /**
 	CRTP of batch_orders()
 */
-Json::Value FuturesClientUSDT::v_batch_orders(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v_batch_orders(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/batchOrders" + query);
-	Json::Value response = (this->_rest_client)->_postreq(full_path); // should be spot?
+	simdjson::dom::element response = (this->_rest_client)->_postreq(full_path); // should be spot?
 
 	return response;
 }
@@ -6143,12 +6143,12 @@ Json::Value FuturesClientUSDT::v_batch_orders(const Params* params_ptr)
 /**
 	CRTP of cancel_batch_orders()
 */
-Json::Value FuturesClientUSDT::v_cancel_batch_orders(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v_cancel_batch_orders(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/batchOrders" + query);
-	Json::Value response = (this->_rest_client)->_deletereq(full_path); // should be spot?
+	simdjson::dom::element response = (this->_rest_client)->_deletereq(full_path); // should be spot?
 
 	return response;
 }
@@ -6156,12 +6156,12 @@ Json::Value FuturesClientUSDT::v_cancel_batch_orders(const Params* params_ptr)
 /**
 	CRTP of cancel_all_orders_timer()
 */
-Json::Value FuturesClientUSDT::v_cancel_all_orders_timer(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v_cancel_all_orders_timer(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/countdownCancelAll" + query);
-	Json::Value response = (this->_rest_client)->_postreq(full_path); // should be spot?
+	simdjson::dom::element response = (this->_rest_client)->_postreq(full_path); // should be spot?
 
 	return response;
 }
@@ -6169,12 +6169,12 @@ Json::Value FuturesClientUSDT::v_cancel_all_orders_timer(const Params* params_pt
 /**
 	CRTP of query_open_order()
 */
-Json::Value FuturesClientUSDT::v_query_open_order(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v_query_open_order(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/openOrder" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path); // should be spot?
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path); // should be spot?
 
 	return response;
 }
@@ -6182,13 +6182,13 @@ Json::Value FuturesClientUSDT::v_query_open_order(const Params* params_ptr)
 /**
 	CRTP of account_balances()
 */
-Json::Value FuturesClientUSDT::v_account_balances(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v_account_balances(const Params* params_ptr)
 {
 
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v2/balance" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path); // should be spot?
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path); // should be spot?
 
 	return response;
 }
@@ -6196,12 +6196,12 @@ Json::Value FuturesClientUSDT::v_account_balances(const Params* params_ptr)
 /**
 	CRTP of change_leverage()
 */
-Json::Value FuturesClientUSDT::v_change_leverage(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v_change_leverage(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/leverage" + query);
-	Json::Value response = (this->_rest_client)->_postreq(full_path); // should be spot?
+	simdjson::dom::element response = (this->_rest_client)->_postreq(full_path); // should be spot?
 
 	return response;
 }
@@ -6209,12 +6209,12 @@ Json::Value FuturesClientUSDT::v_change_leverage(const Params* params_ptr)
 /**
 	CRTP of change_margin_type()
 */
-Json::Value FuturesClientUSDT::v_change_margin_type(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v_change_margin_type(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/marginType" + query);
-	Json::Value response = (this->_rest_client)->_postreq(full_path); // should be spot?
+	simdjson::dom::element response = (this->_rest_client)->_postreq(full_path); // should be spot?
 
 	return response;
 }
@@ -6222,12 +6222,12 @@ Json::Value FuturesClientUSDT::v_change_margin_type(const Params* params_ptr)
 /**
 	CRTP of change_position_margin()
 */
-Json::Value FuturesClientUSDT::v_change_position_margin(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v_change_position_margin(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/positionMargin" + query);
-	Json::Value response = (this->_rest_client)->_postreq(full_path); // should be spot?
+	simdjson::dom::element response = (this->_rest_client)->_postreq(full_path); // should be spot?
 
 	return response;
 }
@@ -6235,12 +6235,12 @@ Json::Value FuturesClientUSDT::v_change_position_margin(const Params* params_ptr
 /**
 	CRTP of change_position_margin_history()
 */
-Json::Value FuturesClientUSDT::v_change_position_margin_history(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v_change_position_margin_history(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/positionMargin/history" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path); // should be spot?
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path); // should be spot?
 
 	return response;
 }
@@ -6248,12 +6248,12 @@ Json::Value FuturesClientUSDT::v_change_position_margin_history(const Params* pa
 /**
 	CRTP of position_info()
 */
-Json::Value FuturesClientUSDT::v_position_info(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v_position_info(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v2/positionRisk" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 
 	return response;
 }
@@ -6261,12 +6261,12 @@ Json::Value FuturesClientUSDT::v_position_info(const Params* params_ptr)
 /**
 	CRTP of get_income_history()
 */
-Json::Value FuturesClientUSDT::v_get_income_history(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v_get_income_history(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/income" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 
 	return response;
 }
@@ -6274,12 +6274,12 @@ Json::Value FuturesClientUSDT::v_get_income_history(const Params* params_ptr)
 /**
 	CRTP of get_leverage_bracket()
 */
-Json::Value FuturesClientUSDT::v_get_leverage_bracket(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v_get_leverage_bracket(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/leverageBracket" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 
 	return response;
 }
@@ -6287,7 +6287,7 @@ Json::Value FuturesClientUSDT::v_get_leverage_bracket(const Params* params_ptr)
 /**
 	CRTP of users_force_orders()
 */
-Json::Value FuturesClientUSDT::v_users_force_orders(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v_users_force_orders(const Params* params_ptr)
 {
 	MissingEndpoint e{};
 	e.append_to_traceback(std::string(__FUNCTION__));
@@ -6297,12 +6297,12 @@ Json::Value FuturesClientUSDT::v_users_force_orders(const Params* params_ptr)
 /**
 	CRTP of pos_adl_quantile_est()
 */
-Json::Value FuturesClientUSDT::v_pos_adl_quantile_est(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v_pos_adl_quantile_est(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/adlQuantile" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 
 	return response;
 }
@@ -6310,7 +6310,7 @@ Json::Value FuturesClientUSDT::v_pos_adl_quantile_est(const Params* params_ptr)
 /**
 	CRTP of get_user_comission_rate() - Does not exist for Coin
 */
-Json::Value FuturesClientUSDT::v_get_user_comission_rate(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v_get_user_comission_rate(const Params* params_ptr)
 {
 	MissingEndpoint e{};
 	e.append_to_traceback(std::string(__FUNCTION__));
@@ -6321,12 +6321,12 @@ Json::Value FuturesClientUSDT::v_get_user_comission_rate(const Params* params_pt
 /**
 	CRTP of api_quant_trading_rules() - Does not exist for Coin
 */
-Json::Value FuturesClientUSDT::v_api_quant_trading_rules(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v_api_quant_trading_rules(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 0);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/apiTradingStatus" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 
 	return response;
 }
@@ -6334,12 +6334,12 @@ Json::Value FuturesClientUSDT::v_api_quant_trading_rules(const Params* params_pt
 /**
 	CRTP of get_blvt_kline_history() - Does not exist for Coin
 */
-Json::Value FuturesClientUSDT::v_get_blvt_kline_history(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v_get_blvt_kline_history(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 0);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/lvtKlines" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 
 	return response;
 }
@@ -6347,12 +6347,12 @@ Json::Value FuturesClientUSDT::v_get_blvt_kline_history(const Params* params_ptr
 /**
 	CRTP of get_composite_index_symbol_info() - Does not exist for Coin
 */
-Json::Value FuturesClientUSDT::v_get_composite_index_symbol_info(const Params* params_ptr)
+simdjson::dom::element FuturesClientUSDT::v_get_composite_index_symbol_info(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 0);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/fapi/v1/indexInfo" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 
 	return response;
 }
@@ -6368,20 +6368,20 @@ std::string FuturesClientUSDT::v__get_listen_key()
 {
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += "/fapi/v1/listenKey";
-	Json::Value response = (this->_rest_client)->_postreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_postreq(full_path);
 
-	return response["response"]["listenKey"].asString();
+	return std::string(response["listenKey"].get_string().value());
 }
 
 /**
 	CRTP of v_ping_listen_key()
 */
-Json::Value FuturesClientUSDT::v__ping_listen_key()
+simdjson::dom::element FuturesClientUSDT::v__ping_listen_key()
 {
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += "/fapi/v1/listenKey";
 
-	Json::Value response = (this->_rest_client)->_putreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_putreq(full_path);
 
 	return response;
 }
@@ -6389,13 +6389,13 @@ Json::Value FuturesClientUSDT::v__ping_listen_key()
 /**
 	CRTP of v_revoke_listen_key()
 */
-Json::Value FuturesClientUSDT::v__revoke_listen_key()
+simdjson::dom::element FuturesClientUSDT::v__revoke_listen_key()
 {
 
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_USDT : _BASE_REST_FUTURES_TESTNET;
 	full_path += "/fapi/v1/listenKey";
 
-	Json::Value response = (this->_rest_client)->_deletereq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_deletereq(full_path);
 
 	return response;
 }
@@ -6467,8 +6467,8 @@ bool FuturesClientCoin::v__ping_client()
 {
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += "/dapi/v1/ping";
-	Json::Value ping_response = (this->_rest_client)->_getreq(full_path)["response"];
-	return (ping_response != Json::nullValue);
+	simdjson::dom::element ping_response = (this->_rest_client)->_getreq(full_path);
+	return (ping_response.is_null());
 }
 
 /**
@@ -6478,7 +6478,7 @@ unsigned long long FuturesClientCoin::v__exchange_time()
 {
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += "/dapi/v1/time";
-	std::string ex_time = (this->_rest_client)->_getreq(full_path)["response"]["serverTime"].asString();
+	std::string ex_time = std::string((this->_rest_client)->_getreq(full_path)["serverTime"].get_string().value());
 
 	return std::atoll(ex_time.c_str());
 }
@@ -6486,107 +6486,107 @@ unsigned long long FuturesClientCoin::v__exchange_time()
 /**
 	CRTP of v_exchange_info()
 */
-Json::Value FuturesClientCoin::v__exchange_info()
+simdjson::dom::element FuturesClientCoin::v__exchange_info()
 {
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += "/dapi/v1/exchangeInfo";
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of v_order_book()
 */
-Json::Value FuturesClientCoin::v__order_book(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v__order_book(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/depth" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of v_public_trades_recent()
 */
-Json::Value FuturesClientCoin::v__public_trades_recent(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v__public_trades_recent(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/trades" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of v_public_trades_historical()
 */
-Json::Value FuturesClientCoin::v__public_trades_historical(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v__public_trades_historical(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/historicalTrades" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of v_public_trades_agg()
 */
-Json::Value FuturesClientCoin::v__public_trades_agg(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v__public_trades_agg(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/aggTrades" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of v_klines()
 */
-Json::Value FuturesClientCoin::v__klines(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v__klines(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/klines" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of v_daily_ticker_stats()
 */
-Json::Value FuturesClientCoin::v__daily_ticker_stats(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v__daily_ticker_stats(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/ticker/24hr" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of v_get_ticker()
 */
-Json::Value FuturesClientCoin::v__get_ticker(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v__get_ticker(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/ticker/price" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of v_get_order_book_ticker()
 */
-Json::Value FuturesClientCoin::v__get_order_book_ticker(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v__get_order_book_ticker(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/ticker/bookTicker" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
@@ -6601,12 +6601,12 @@ Json::Value FuturesClientCoin::v__get_order_book_ticker(const Params* params_ptr
 /**
 	CRTP of v_new_order()
 */
-Json::Value FuturesClientCoin::v__new_order(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v__new_order(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/order" + query);
-	Json::Value response = (this->_rest_client)->_postreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_postreq(full_path);
 
 	return response;
 }
@@ -6614,12 +6614,12 @@ Json::Value FuturesClientCoin::v__new_order(const Params* params_ptr)
 /**
 	CRTP of v_cancel_order()
 */
-Json::Value FuturesClientCoin::v__cancel_order(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v__cancel_order(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/order" + query);
-	Json::Value response = (this->_rest_client)->_deletereq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_deletereq(full_path);
 
 	return response;
 }
@@ -6627,12 +6627,12 @@ Json::Value FuturesClientCoin::v__cancel_order(const Params* params_ptr)
 /**
 	CRTP of v_cancel_all_orders()
 */
-Json::Value FuturesClientCoin::v__cancel_all_orders(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v__cancel_all_orders(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/allOpenOrders" + query);
-	Json::Value response = (this->_rest_client)->_deletereq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_deletereq(full_path);
 
 	return response;
 }
@@ -6640,12 +6640,12 @@ Json::Value FuturesClientCoin::v__cancel_all_orders(const Params* params_ptr)
 /**
 	CRTP of v_query_order()
 */
-Json::Value FuturesClientCoin::v__query_order(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v__query_order(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/order" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 
 	return response;
 }
@@ -6653,12 +6653,12 @@ Json::Value FuturesClientCoin::v__query_order(const Params* params_ptr)
 /**
 	CRTP of v_open_orders()
 */
-Json::Value FuturesClientCoin::v__open_orders(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v__open_orders(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/openOrders" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 
 	return response;
 }
@@ -6666,12 +6666,12 @@ Json::Value FuturesClientCoin::v__open_orders(const Params* params_ptr)
 /**
 	CRTP of v_all_orders()
 */
-Json::Value FuturesClientCoin::v__all_orders(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v__all_orders(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/allOrders" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 
 	return response;
 }
@@ -6679,12 +6679,12 @@ Json::Value FuturesClientCoin::v__all_orders(const Params* params_ptr)
 /**
 	CRTP of v_account_info()
 */
-Json::Value FuturesClientCoin::v__account_info(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v__account_info(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/account" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 
 	return response;
 }
@@ -6692,12 +6692,12 @@ Json::Value FuturesClientCoin::v__account_info(const Params* params_ptr)
 /**
 	CRTP of v_account_trades_list()
 */
-Json::Value FuturesClientCoin::v__account_trades_list(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v__account_trades_list(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/userTrades" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 
 	return response;
 }
@@ -6708,12 +6708,12 @@ Json::Value FuturesClientCoin::v__account_trades_list(const Params* params_ptr)
 /**
 	CRTP of change_position_mode()
 */
-Json::Value FuturesClientCoin::v_change_position_mode(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v_change_position_mode(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/positionSide/dual" + query);
-	Json::Value response = (this->_rest_client)->_postreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_postreq(full_path);
 
 	return response;
 }
@@ -6721,12 +6721,12 @@ Json::Value FuturesClientCoin::v_change_position_mode(const Params* params_ptr)
 /**
 	CRTP of get_position_mode()
 */
-Json::Value FuturesClientCoin::v_get_position_mode(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v_get_position_mode(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/positionSide/dual" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 
 	return response;
 }
@@ -6734,12 +6734,12 @@ Json::Value FuturesClientCoin::v_get_position_mode(const Params* params_ptr)
 /**
 	CRTP of batch_orders()
 */
-Json::Value FuturesClientCoin::v_batch_orders(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v_batch_orders(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/batchOrders" + query);
-	Json::Value response = (this->_rest_client)->_postreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_postreq(full_path);
 
 	return response;
 }
@@ -6747,12 +6747,12 @@ Json::Value FuturesClientCoin::v_batch_orders(const Params* params_ptr)
 /**
 	CRTP of cancel_batch_orders()
 */
-Json::Value FuturesClientCoin::v_cancel_batch_orders(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v_cancel_batch_orders(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/batchOrders" + query);
-	Json::Value response = (this->_rest_client)->_deletereq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_deletereq(full_path);
 
 	return response;
 }
@@ -6760,12 +6760,12 @@ Json::Value FuturesClientCoin::v_cancel_batch_orders(const Params* params_ptr)
 /**
 	CRTP of cancel_all_orders_timer()
 */
-Json::Value FuturesClientCoin::v_cancel_all_orders_timer(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v_cancel_all_orders_timer(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/countdownCancelAll" + query);
-	Json::Value response = (this->_rest_client)->_postreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_postreq(full_path);
 
 	return response;
 }
@@ -6773,12 +6773,12 @@ Json::Value FuturesClientCoin::v_cancel_all_orders_timer(const Params* params_pt
 /**
 	CRTP of query_open_order()
 */
-Json::Value FuturesClientCoin::v_query_open_order(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v_query_open_order(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/openOrder" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 
 	return response;
 }
@@ -6786,12 +6786,12 @@ Json::Value FuturesClientCoin::v_query_open_order(const Params* params_ptr)
 /**
 	CRTP of account_balances()
 */
-Json::Value FuturesClientCoin::v_account_balances(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v_account_balances(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/balance" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 
 	return response;
 }
@@ -6799,12 +6799,12 @@ Json::Value FuturesClientCoin::v_account_balances(const Params* params_ptr)
 /**
 	CRTP of change_leverage()
 */
-Json::Value FuturesClientCoin::v_change_leverage(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v_change_leverage(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/leverage" + query);
-	Json::Value response = (this->_rest_client)->_postreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_postreq(full_path);
 
 	return response;
 }
@@ -6812,12 +6812,12 @@ Json::Value FuturesClientCoin::v_change_leverage(const Params* params_ptr)
 /**
 	CRTP of change_margin_type()
 */
-Json::Value FuturesClientCoin::v_change_margin_type(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v_change_margin_type(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/marginType" + query);
-	Json::Value response = (this->_rest_client)->_postreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_postreq(full_path);
 
 	return response;
 }
@@ -6825,12 +6825,12 @@ Json::Value FuturesClientCoin::v_change_margin_type(const Params* params_ptr)
 /**
 	CRTP of change_position_margin()
 */
-Json::Value FuturesClientCoin::v_change_position_margin(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v_change_position_margin(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/positionMargin" + query);
-	Json::Value response = (this->_rest_client)->_postreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_postreq(full_path);
 
 	return response;
 }
@@ -6838,12 +6838,12 @@ Json::Value FuturesClientCoin::v_change_position_margin(const Params* params_ptr
 /**
 	CRTP of change_position_margin_history()
 */
-Json::Value FuturesClientCoin::v_change_position_margin_history(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v_change_position_margin_history(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/positionMargin/history" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 
 	return response;
 }
@@ -6851,12 +6851,12 @@ Json::Value FuturesClientCoin::v_change_position_margin_history(const Params* pa
 /**
 	CRTP of position_info()
 */
-Json::Value FuturesClientCoin::v_position_info(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v_position_info(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/positionRisk" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 
 	return response;
 }
@@ -6864,12 +6864,12 @@ Json::Value FuturesClientCoin::v_position_info(const Params* params_ptr)
 /**
 	CRTP of get_income_history()
 */
-Json::Value FuturesClientCoin::v_get_income_history(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v_get_income_history(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/income" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 
 	return response;
 }
@@ -6877,12 +6877,12 @@ Json::Value FuturesClientCoin::v_get_income_history(const Params* params_ptr)
 /**
 	CRTP of get_leverage_bracket()
 */
-Json::Value FuturesClientCoin::v_get_leverage_bracket(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v_get_leverage_bracket(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/leverageBracket" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 
 	return response;
 }
@@ -6890,12 +6890,12 @@ Json::Value FuturesClientCoin::v_get_leverage_bracket(const Params* params_ptr)
 /**
 	CRTP of users_force_orders()
 */
-Json::Value FuturesClientCoin::v_users_force_orders(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v_users_force_orders(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/forceOrders" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 
 	return response;
 }
@@ -6903,12 +6903,12 @@ Json::Value FuturesClientCoin::v_users_force_orders(const Params* params_ptr)
 /**
 	CRTP of pos_adl_quantile_est()
 */
-Json::Value FuturesClientCoin::v_pos_adl_quantile_est(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v_pos_adl_quantile_est(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/adlQuantile" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 
 	return response;
 }
@@ -6916,12 +6916,12 @@ Json::Value FuturesClientCoin::v_pos_adl_quantile_est(const Params* params_ptr)
 /**
 	CRTP of get_user_comission_rate()
 */
-Json::Value FuturesClientCoin::v_get_user_comission_rate(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v_get_user_comission_rate(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/commissionRate" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 
 	return response;
 }
@@ -6930,7 +6930,7 @@ Json::Value FuturesClientCoin::v_get_user_comission_rate(const Params* params_pt
 /**
 	CRTP of api_quant_trading_rules() - Does not exist for Coin
 */
-Json::Value FuturesClientCoin::v_api_quant_trading_rules(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v_api_quant_trading_rules(const Params* params_ptr)
 {
 	MissingEndpoint e{};
 	e.append_to_traceback(std::string(__FUNCTION__));
@@ -6940,7 +6940,7 @@ Json::Value FuturesClientCoin::v_api_quant_trading_rules(const Params* params_pt
 /**
 	CRTP of get_blvt_kline_history() - Does not exist for Coin
 */
-Json::Value FuturesClientCoin::v_get_blvt_kline_history(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v_get_blvt_kline_history(const Params* params_ptr)
 {
 	MissingEndpoint e{};
 	e.append_to_traceback(std::string(__FUNCTION__));
@@ -6950,7 +6950,7 @@ Json::Value FuturesClientCoin::v_get_blvt_kline_history(const Params* params_ptr
 /**
 	CRTP of get_composite_index_symbol_info() - Does not exist for Coin
 */
-Json::Value FuturesClientCoin::v_get_composite_index_symbol_info(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v_get_composite_index_symbol_info(const Params* params_ptr)
 {
 	MissingEndpoint e{};
 	e.append_to_traceback(std::string(__FUNCTION__));
@@ -6981,21 +6981,21 @@ std::string FuturesClientCoin::v__get_listen_key()
 {
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += "/dapi/v1/listenKey";
-	Json::Value response = (this->_rest_client)->_postreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_postreq(full_path);
 
-	return response["response"]["listenKey"].asString();
+	return std::string(response["listenKey"].get_string().value());
 }
 
 /**
 	CRTP of v_ping_listen_key()
 */
-Json::Value FuturesClientCoin::v__ping_listen_key()
+simdjson::dom::element FuturesClientCoin::v__ping_listen_key()
 {
 	// no signature is needed here
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += "/dapi/v1/listenKey";
 
-	Json::Value response = (this->_rest_client)->_putreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_putreq(full_path);
 
 	return response;
 }
@@ -7003,13 +7003,13 @@ Json::Value FuturesClientCoin::v__ping_listen_key()
 /**
 	CRTP of v_revoke_listen_key()
 */
-Json::Value FuturesClientCoin::v__revoke_listen_key()
+simdjson::dom::element FuturesClientCoin::v__revoke_listen_key()
 {
 	// no signature is needed here
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += "/dapi/v1/listenKey";
 
-	Json::Value response = (this->_rest_client)->_deletereq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_deletereq(full_path);
 
 	return response;
 }
@@ -7022,31 +7022,31 @@ Json::Value FuturesClientCoin::v__revoke_listen_key()
 /**
 	CRTP of mark_price()
 */
-Json::Value FuturesClientCoin::v_mark_price(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v_mark_price(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/premiumIndex" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of open_interest()
 */
-Json::Value FuturesClientCoin::v_open_interest(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v_open_interest(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/openInterest" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of composite_index_symbol_info() - Missing endpoint for Coin margined
 */
-Json::Value FuturesClientCoin::v_composite_index_symbol_info(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v_composite_index_symbol_info(const Params* params_ptr)
 {
 	MissingEndpoint e{};
 	e.append_to_traceback(std::string(__FUNCTION__));
@@ -7059,36 +7059,36 @@ Json::Value FuturesClientCoin::v_composite_index_symbol_info(const Params* param
 /**
 	CRTP of continues_klines() - Unique for Coin Margined client
 */
-Json::Value FuturesClientCoin::v_continues_klines(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v_continues_klines(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/continuousKlines" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of index_klines() - Unique for Coin Margined client
 */
-Json::Value FuturesClientCoin::v_index_klines(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v_index_klines(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/indexPriceKlines" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of mark_klines() - Unique for Coin Margined client
 */
-Json::Value FuturesClientCoin::v_mark_klines(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v_mark_klines(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_FUTURES_COIN : _BASE_REST_FUTURES_TESTNET;
 	full_path += ("/dapi/v1/markPriceKlines" + query);
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
@@ -7099,7 +7099,7 @@ Json::Value FuturesClientCoin::v_mark_klines(const Params* params_ptr)
 /**
 	CRTP of funding_rate_history() - Missing endpoint for this client
 */
-Json::Value FuturesClientCoin::v_funding_rate_history(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v_funding_rate_history(const Params* params_ptr)
 {
 	MissingEndpoint e{};
 	e.append_to_traceback(std::string(__FUNCTION__));
@@ -7109,7 +7109,7 @@ Json::Value FuturesClientCoin::v_funding_rate_history(const Params* params_ptr)
 /**
 	CRTP of change_multiasset_margin_mode() - Missing endpoint for this client
 */
-Json::Value FuturesClientCoin::v_change_multiasset_margin_mode(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v_change_multiasset_margin_mode(const Params* params_ptr)
 {
 	MissingEndpoint e{};
 	e.append_to_traceback(std::string(__FUNCTION__));
@@ -7119,7 +7119,7 @@ Json::Value FuturesClientCoin::v_change_multiasset_margin_mode(const Params* par
 /**
 	CRTP of check_multiasset_margin_mode() - Missing endpoint for this client
 */
-Json::Value FuturesClientCoin::v_check_multiasset_margin_mode(const Params* params_ptr)
+simdjson::dom::element FuturesClientCoin::v_check_multiasset_margin_mode(const Params* params_ptr)
 {
 	MissingEndpoint e{};
 	e.append_to_traceback(std::string(__FUNCTION__));
@@ -7201,9 +7201,9 @@ std::string OpsClient::v_get_listen_key()
 {
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_OPS : _BASE_REST_OPS_TESTNET;
 	full_path += "/vapi/v1/userDataStream";
-	Json::Value response = (this->_rest_client)->_postreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_postreq(full_path);
 
-	return response["response"]["listenKey"].asString();
+	return std::string(response["listenKey"].get_string().value());
 }
 
 /**
@@ -7211,11 +7211,11 @@ std::string OpsClient::v_get_listen_key()
 	@param listen_key - the listen_key
 	@return json returned by the request
 */
-Json::Value OpsClient::v_ping_listen_key(const std::string& listen_key)
+simdjson::dom::element OpsClient::v_ping_listen_key(const std::string& listen_key)
 {
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_OPS : _BASE_REST_OPS_TESTNET;
 	full_path += ("/vapi/v1/userDataStream?listenKey=" + listen_key);
-	Json::Value response = listen_key.empty() ? (this->_rest_client)->_putreq(full_path) : (this->_rest_client)->_postreq(full_path);
+	simdjson::dom::element response = listen_key.empty() ? (this->_rest_client)->_putreq(full_path) : (this->_rest_client)->_postreq(full_path);
 
 	return response;
 }
@@ -7225,11 +7225,11 @@ Json::Value OpsClient::v_ping_listen_key(const std::string& listen_key)
 	@param listen_key - the listen_key
 	@return json returned by the request
 */
-Json::Value OpsClient::v_revoke_listen_key(const std::string& listen_key)
+simdjson::dom::element OpsClient::v_revoke_listen_key(const std::string& listen_key)
 {
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_OPS : _BASE_REST_OPS_TESTNET;
 	full_path += ("/vapi/v1/userDataStream?listenKey=" + listen_key);
-	Json::Value response = (this->_rest_client)->_postreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_postreq(full_path);
 
 	return response;
 }
@@ -7245,8 +7245,8 @@ bool OpsClient::v_ping_client()
 {
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_OPS : _BASE_REST_OPS_TESTNET;
 	full_path += "/vapi/v1/ping";
-	Json::Value ping_response = (this->_rest_client)->_getreq(full_path)["response"];
-	return (ping_response != Json::nullValue);
+	simdjson::dom::element ping_response = (this->_rest_client)->_getreq(full_path);
+	return (ping_response .is_null());
 }
 
 /**
@@ -7256,7 +7256,7 @@ unsigned long long OpsClient::v_exchange_time()
 {
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_OPS : _BASE_REST_OPS_TESTNET;
 	full_path += "/vapi/v1/time";
-	std::string ex_time = (this->_rest_client)->_getreq(full_path)["response"]["serverTime"].asString();
+	std::string ex_time = std::string((this->_rest_client)->_getreq(full_path)["serverTime"].get_string().value());
 
 	return std::atoll(ex_time.c_str());
 }
@@ -7264,47 +7264,47 @@ unsigned long long OpsClient::v_exchange_time()
 /**
 	CRTP of exchange_info()
 */
-Json::Value OpsClient::v_exchange_info()
+simdjson::dom::element OpsClient::v_exchange_info()
 {
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_OPS : _BASE_REST_OPS_TESTNET;
 	full_path += "/vapi/v1/exchangeInfo";
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of public_trades_recent()
 */
-Json::Value OpsClient::v_get_ticker(const Params* params_ptr)
+simdjson::dom::element OpsClient::v_get_ticker(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_OPS : _BASE_REST_OPS_TESTNET;
 	full_path += "/vapi/v1/ticker" + query;
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 
 */
-Json::Value OpsClient::get_spot_index_price(const Params* params_ptr)
+simdjson::dom::element OpsClient::get_spot_index_price(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_OPS : _BASE_REST_OPS_TESTNET;
 	full_path += "/vapi/v1/index" + query;
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 
 */
-Json::Value OpsClient::get_mark_price(const Params* params_ptr)
+simdjson::dom::element OpsClient::get_mark_price(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_OPS : _BASE_REST_OPS_TESTNET;
 	full_path += "/vapi/v1/mark" + query;
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
@@ -7313,105 +7313,105 @@ Json::Value OpsClient::get_mark_price(const Params* params_ptr)
 /**
 	CRTP of order_book()
 */
-Json::Value OpsClient::v_order_book(const Params* params_ptr)
+simdjson::dom::element OpsClient::v_order_book(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_OPS : _BASE_REST_OPS_TESTNET;
 	full_path += "/vapi/v1/depth" + query;
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of klines()
 */
-Json::Value OpsClient::v_klines(const Params* params_ptr)
+simdjson::dom::element OpsClient::v_klines(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_OPS : _BASE_REST_OPS_TESTNET;
 	full_path += "/vapi/v1/klines" + query;
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of public_trades_recent()
 */
-Json::Value OpsClient::v_public_trades_recent(const Params* params_ptr)
+simdjson::dom::element OpsClient::v_public_trades_recent(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_OPS : _BASE_REST_OPS_TESTNET;
 	full_path += "/vapi/v1/trades" + query;
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 	CRTP of public_trades_historical()
 */
-Json::Value OpsClient::v_public_trades_historical(const Params* params_ptr)
+simdjson::dom::element OpsClient::v_public_trades_historical(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_OPS : _BASE_REST_OPS_TESTNET;
 	full_path += "/vapi/v1/historicalTrades" + query;
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 
 /**
 
 */
-Json::Value OpsClient::funds_transfer(const Params* params_ptr)
+simdjson::dom::element OpsClient::funds_transfer(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_OPS : _BASE_REST_OPS_TESTNET;
 	full_path += "/vapi/v1/transfer" + query;
-	Json::Value response = (this->_rest_client)->_postreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_postreq(full_path);
 	return response;
 }
 
 /**
 
 */
-Json::Value OpsClient::holding_info(const Params* params_ptr)
+simdjson::dom::element OpsClient::holding_info(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_OPS : _BASE_REST_OPS_TESTNET;
 	full_path += "/vapi/v1/position" + query;
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 	return response;
 }
 /**
 
 */
-Json::Value OpsClient::account_funding_flow(const Params* params_ptr)
+simdjson::dom::element OpsClient::account_funding_flow(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_OPS : _BASE_REST_OPS_TESTNET;
 	full_path += "/vapi/v1/bill" + query;
-	Json::Value response = (this->_rest_client)->_postreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_postreq(full_path);
 	return response;
 }
 /**
 
 */
-Json::Value OpsClient::batch_orders(const Params* params_ptr)
+simdjson::dom::element OpsClient::batch_orders(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_OPS : _BASE_REST_OPS_TESTNET;
 	full_path += "/vapi/v1/batchOrders" + query;
-	Json::Value response = (this->_rest_client)->_postreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_postreq(full_path);
 	return response;
 }
 /**
 
 */
-Json::Value OpsClient::cancel_batch_orders(const Params* params_ptr)
+simdjson::dom::element OpsClient::cancel_batch_orders(const Params* params_ptr)
 {
 	std::string query = params_ptr ? this->_generate_query(params_ptr) : "";
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_OPS : _BASE_REST_OPS_TESTNET;
 	full_path += "/vapi/v1/batchOrders" + query;
-	Json::Value response = (this->_rest_client)->_deletereq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_deletereq(full_path);
 	return response;
 }
 //  ------------------------------ End | OpsClient CRTP methods - Market Data Implementations
@@ -7426,12 +7426,12 @@ Json::Value OpsClient::cancel_batch_orders(const Params* params_ptr)
 /**
 	CRTP of account_info()
 */
-Json::Value OpsClient::v_account_info(const Params* params_ptr)
+simdjson::dom::element OpsClient::v_account_info(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_OPS : _BASE_REST_OPS_TESTNET;
 	full_path += "/vapi/v1/account" + query;
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 
 	return response;
 }
@@ -7440,12 +7440,12 @@ Json::Value OpsClient::v_account_info(const Params* params_ptr)
 /**
 	CRTP of test_new_order()
 */
-Json::Value OpsClient::v_test_new_order(const Params* params_ptr)
+simdjson::dom::element OpsClient::v_test_new_order(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_OPS : _BASE_REST_OPS_TESTNET;
 	full_path += "/vapi/v1/order" + query;
-	Json::Value response = (this->_rest_client)->_postreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_postreq(full_path);
 
 	return response;
 }
@@ -7453,12 +7453,12 @@ Json::Value OpsClient::v_test_new_order(const Params* params_ptr)
 /**
 	CRTP of new_order()
 */
-Json::Value OpsClient::v_new_order(const Params* params_ptr)
+simdjson::dom::element OpsClient::v_new_order(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_OPS : _BASE_REST_OPS_TESTNET;
 	full_path += "/vapi/v1/order" + query;
-	Json::Value response = (this->_rest_client)->_postreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_postreq(full_path);
 
 	return response;
 }
@@ -7466,12 +7466,12 @@ Json::Value OpsClient::v_new_order(const Params* params_ptr)
 /**
 	CRTP of cancel_order()
 */
-Json::Value OpsClient::v_cancel_order(const Params* params_ptr)
+simdjson::dom::element OpsClient::v_cancel_order(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_OPS : _BASE_REST_OPS_TESTNET;
 	full_path += "/vapi/v1/order" + query;
-	Json::Value response = (this->_rest_client)->_deletereq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_deletereq(full_path);
 
 	return response;
 }
@@ -7479,12 +7479,12 @@ Json::Value OpsClient::v_cancel_order(const Params* params_ptr)
 /**
 	CRTP of cancel_all_orders()
 */
-Json::Value OpsClient::v_cancel_all_orders(const Params* params_ptr)
+simdjson::dom::element OpsClient::v_cancel_all_orders(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_OPS : _BASE_REST_OPS_TESTNET;
 	full_path += "/vapi/v1/allOpenOrders" + query;
-	Json::Value response = (this->_rest_client)->_deletereq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_deletereq(full_path);
 
 	return response;
 }
@@ -7492,12 +7492,12 @@ Json::Value OpsClient::v_cancel_all_orders(const Params* params_ptr)
 /**
 	CRTP of query_order()
 */
-Json::Value OpsClient::v_query_order(const Params* params_ptr)
+simdjson::dom::element OpsClient::v_query_order(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_OPS : _BASE_REST_OPS_TESTNET;
 	full_path += " /vapi/v1/order" + query;
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 
 	return response;
 }
@@ -7505,12 +7505,12 @@ Json::Value OpsClient::v_query_order(const Params* params_ptr)
 /**
 	CRTP of open_orders()
 */
-Json::Value OpsClient::v_open_orders(const Params* params_ptr)
+simdjson::dom::element OpsClient::v_open_orders(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_OPS : _BASE_REST_OPS_TESTNET;
 	full_path += "/vapi/v1/openOrders" + query;
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 
 	return response;
 }
@@ -7518,12 +7518,12 @@ Json::Value OpsClient::v_open_orders(const Params* params_ptr)
 /**
 	CRTP of all_orders()
 */
-Json::Value OpsClient::v_all_orders(const Params* params_ptr)
+simdjson::dom::element OpsClient::v_all_orders(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_OPS : _BASE_REST_OPS_TESTNET;
 	full_path += "/vapi/v1/historyOrders" + query;
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 
 	return response;
 }
@@ -7531,12 +7531,12 @@ Json::Value OpsClient::v_all_orders(const Params* params_ptr)
 /**
 	CRTP of account_trades_list()
 */
-Json::Value OpsClient::v_account_trades_list(const Params* params_ptr)
+simdjson::dom::element OpsClient::v_account_trades_list(const Params* params_ptr)
 {
 	std::string query = this->_generate_query(params_ptr, 1);
 	std::string full_path = !this->_testnet_mode ? _BASE_REST_OPS : _BASE_REST_OPS_TESTNET;
 	full_path += "/vapi/v1/userTrades" + query;
-	Json::Value response = (this->_rest_client)->_getreq(full_path);
+	simdjson::dom::element response = (this->_rest_client)->_getreq(full_path);
 
 	return response;
 }
@@ -7544,7 +7544,7 @@ Json::Value OpsClient::v_account_trades_list(const Params* params_ptr)
 /**
 	CRTP of public_trades_agg()
 */
-Json::Value OpsClient::v_public_trades_agg(const Params* params_ptr)
+simdjson::dom::element OpsClient::v_public_trades_agg(const Params* params_ptr)
 {
 	MissingEndpoint e{};
 	e.append_to_traceback(std::string(__FUNCTION__));
@@ -7554,7 +7554,7 @@ Json::Value OpsClient::v_public_trades_agg(const Params* params_ptr)
 /**
 	CRTP of get_order_book_ticker()
 */
-Json::Value OpsClient::v_get_order_book_ticker(const Params* params_ptr)
+simdjson::dom::element OpsClient::v_get_order_book_ticker(const Params* params_ptr)
 {
 	MissingEndpoint e{};
 	e.append_to_traceback(std::string(__FUNCTION__));
@@ -7563,7 +7563,7 @@ Json::Value OpsClient::v_get_order_book_ticker(const Params* params_ptr)
 /**
 	CRTP of daily_ticker_stats()
 */
-Json::Value OpsClient::v_daily_ticker_stats(const Params* params_ptr)
+simdjson::dom::element OpsClient::v_daily_ticker_stats(const Params* params_ptr)
 {
 	MissingEndpoint e{};
 	e.append_to_traceback(std::string(__FUNCTION__));
@@ -7765,70 +7765,70 @@ void Params::flush_params()
 template class Client<SpotClient>;
 
 template class Client<FuturesClient<FuturesClientUSDT>>;
-template Json::Value FuturesClient<FuturesClientUSDT>::get_position_mode(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientUSDT>::change_position_mode(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientUSDT>::batch_orders(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientUSDT>::cancel_batch_orders(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientUSDT>::cancel_all_orders_timer(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientUSDT>::query_open_order(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientUSDT>::account_balances(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientUSDT>::change_leverage(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientUSDT>::change_margin_type(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientUSDT>::change_position_margin(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientUSDT>::change_position_margin_history(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientUSDT>::position_info(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientUSDT>::get_income_history(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientUSDT>::get_leverage_bracket(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientUSDT>::users_force_orders(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientUSDT>::pos_adl_quantile_est(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientUSDT>::get_user_comission_rate(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientUSDT>::api_quant_trading_rules(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientUSDT>::get_blvt_kline_history(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientUSDT>::get_composite_index_symbol_info(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientUSDT>::mark_price(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientUSDT>::open_interest(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientUSDT>::composite_index_symbol_info(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientUSDT>::continues_klines(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientUSDT>::index_klines(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientUSDT>::mark_klines(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientUSDT>::funding_rate_history(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientUSDT>::open_interest_stats(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientUSDT>::top_long_short_ratio(const Params* params_ptr, bool accounts);
-template Json::Value FuturesClient<FuturesClientUSDT>::global_long_short_ratio(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientUSDT>::taker_long_short_ratio(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientUSDT>::get_position_mode(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientUSDT>::change_position_mode(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientUSDT>::batch_orders(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientUSDT>::cancel_batch_orders(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientUSDT>::cancel_all_orders_timer(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientUSDT>::query_open_order(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientUSDT>::account_balances(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientUSDT>::change_leverage(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientUSDT>::change_margin_type(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientUSDT>::change_position_margin(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientUSDT>::change_position_margin_history(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientUSDT>::position_info(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientUSDT>::get_income_history(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientUSDT>::get_leverage_bracket(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientUSDT>::users_force_orders(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientUSDT>::pos_adl_quantile_est(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientUSDT>::get_user_comission_rate(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientUSDT>::api_quant_trading_rules(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientUSDT>::get_blvt_kline_history(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientUSDT>::get_composite_index_symbol_info(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientUSDT>::mark_price(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientUSDT>::open_interest(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientUSDT>::composite_index_symbol_info(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientUSDT>::continues_klines(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientUSDT>::index_klines(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientUSDT>::mark_klines(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientUSDT>::funding_rate_history(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientUSDT>::open_interest_stats(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientUSDT>::top_long_short_ratio(const Params* params_ptr, bool accounts);
+template simdjson::dom::element FuturesClient<FuturesClientUSDT>::global_long_short_ratio(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientUSDT>::taker_long_short_ratio(const Params* params_ptr);
 
 template class Client<FuturesClient<FuturesClientCoin>>;
-template Json::Value FuturesClient<FuturesClientCoin>::get_position_mode(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientCoin>::change_position_mode(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientCoin>::batch_orders(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientCoin>::cancel_batch_orders(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientCoin>::cancel_all_orders_timer(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientCoin>::query_open_order(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientCoin>::account_balances(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientCoin>::change_leverage(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientCoin>::change_margin_type(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientCoin>::change_position_margin(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientCoin>::change_position_margin_history(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientCoin>::position_info(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientCoin>::get_income_history(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientCoin>::get_leverage_bracket(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientCoin>::users_force_orders(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientCoin>::pos_adl_quantile_est(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientCoin>::get_user_comission_rate(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientCoin>::api_quant_trading_rules(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientCoin>::get_blvt_kline_history(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientCoin>::get_composite_index_symbol_info(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientCoin>::mark_price(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientCoin>::open_interest(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientCoin>::composite_index_symbol_info(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientCoin>::continues_klines(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientCoin>::index_klines(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientCoin>::mark_klines(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientCoin>::funding_rate_history(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientCoin>::open_interest_stats(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientCoin>::top_long_short_ratio(const Params* params_ptr, bool accounts);
-template Json::Value FuturesClient<FuturesClientCoin>::global_long_short_ratio(const Params* params_ptr);
-template Json::Value FuturesClient<FuturesClientCoin>::taker_long_short_ratio(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientCoin>::get_position_mode(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientCoin>::change_position_mode(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientCoin>::batch_orders(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientCoin>::cancel_batch_orders(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientCoin>::cancel_all_orders_timer(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientCoin>::query_open_order(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientCoin>::account_balances(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientCoin>::change_leverage(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientCoin>::change_margin_type(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientCoin>::change_position_margin(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientCoin>::change_position_margin_history(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientCoin>::position_info(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientCoin>::get_income_history(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientCoin>::get_leverage_bracket(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientCoin>::users_force_orders(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientCoin>::pos_adl_quantile_est(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientCoin>::get_user_comission_rate(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientCoin>::api_quant_trading_rules(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientCoin>::get_blvt_kline_history(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientCoin>::get_composite_index_symbol_info(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientCoin>::mark_price(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientCoin>::open_interest(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientCoin>::composite_index_symbol_info(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientCoin>::continues_klines(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientCoin>::index_klines(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientCoin>::mark_klines(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientCoin>::funding_rate_history(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientCoin>::open_interest_stats(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientCoin>::top_long_short_ratio(const Params* params_ptr, bool accounts);
+template simdjson::dom::element FuturesClient<FuturesClientCoin>::global_long_short_ratio(const Params* params_ptr);
+template simdjson::dom::element FuturesClient<FuturesClientCoin>::taker_long_short_ratio(const Params* params_ptr);
 
 template class Client<OpsClient>;
 

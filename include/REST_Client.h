@@ -9,7 +9,7 @@ private:
 	{
 		RequestHandler();
 		std::string req_raw;
-		Json::Value req_json;
+		simdjson::dom::element req_json;
 		CURLcode req_status;
 		std::unique_lock<std::mutex>* locker;
 		RestSession* session;
@@ -26,19 +26,19 @@ public:
 	CURL* _put_handle{};
 	CURL* _delete_handle{};
 
-	Json::Value _getreq(std::string full_path);
+	simdjson::dom::element _getreq(std::string full_path);
 	void get_timeout(unsigned long interval);
 	std::mutex _get_lock;
 
-	Json::Value _postreq(std::string full_path);
+	simdjson::dom::element _postreq(std::string full_path);
 	void post_timeout(unsigned long interval);
 	std::mutex _post_lock;
 
-	Json::Value _putreq(std::string full_path);
+	simdjson::dom::element _putreq(std::string full_path);
 	void put_timeout(unsigned long interval);
 	std::mutex _put_lock;
 
-	Json::Value _deletereq(std::string full_path);
+	simdjson::dom::element _deletereq(std::string full_path);
 	void delete_timeout(unsigned long interval);
 	std::mutex _delete_lock;
 

@@ -1,6 +1,6 @@
 #include "../include/Binance_Client.h"
-
-Json::CharReaderBuilder _J_BUILDER;
+#include "simdjson/dom/element.h"
+#include "simdjson/dom/parser.h"
 
 static long _IDLE_TIME_TCP = 120L;
 static long _INTVL_TIME_TCP = 60L;
@@ -16,7 +16,7 @@ static long _INTVL_TIME_TCP = 60L;
 unsigned int _REQ_CALLBACK(void* contents, unsigned int size, unsigned int nmemb, RestSession::RequestHandler* req) 
 {
 	(&req->req_raw)->append((char*)contents, size * nmemb);
-
+	
 	return size * nmemb;
 };
 
@@ -82,11 +82,11 @@ void RestSession::set_verbose(const long int state)
 	@param full_path - the full path of the request
 	@return a JSON value returned by the request response
 */
-Json::Value RestSession::_getreq(std::string full_path)
+simdjson::dom::element RestSession::_getreq(std::string full_path)
 {
+	RequestHandler request{};
 	try
 	{
-		RequestHandler request{};
 		request.session = this;
 
 		CURL* curl;
@@ -104,24 +104,27 @@ Json::Value RestSession::_getreq(std::string full_path)
 		
 		curl_easy_cleanup(curl);
 
-		Json::CharReader* _J_READER = _J_BUILDER.newCharReader();
+		/*Json::CharReader* _J_READER = _J_BUILDER.newCharReader();
 
 		std::string parse_errors{};		
 		bool parse_status = _J_READER->parse(request.req_raw.c_str(),
 										request.req_raw.c_str() + request.req_raw.size(),
-										&request.req_json["response"],
-										&parse_errors);
+										&request.req_json,
+										&parse_errors);*/
 
-		if (request.req_status != CURLE_OK || request.req_status == CURLE_HTTP_RETURNED_ERROR)
+		simdjson::dom::parser* parser = new simdjson::dom::parser();
+		request.req_json = parser->parse(request.req_raw);
+
+		/*if (request.req_status != CURLE_OK || request.req_status == CURLE_HTTP_RETURNED_ERROR)
 		{
-			request.req_json["response"] = request.req_raw;
+			request.req_json = request.req_raw;
 		}
 		else if (!parse_status)
 		{
 			request.req_json["parse_status"] = parse_errors;
 		}
 
-		request.req_json["request_status"] = 1;
+		request.req_json["request_status"] = 1;*/
 
 		return request.req_json;
 	}
@@ -138,7 +141,7 @@ Json::Value RestSession::_getreq(std::string full_path)
 	@param full_path - the full path of the request
 	@return a JSON value returned by the request response
 */
-Json::Value RestSession::_postreq(std::string full_path)
+simdjson::dom::element RestSession::_postreq(std::string full_path)
 {
 	try
 	{
@@ -167,7 +170,7 @@ Json::Value RestSession::_postreq(std::string full_path)
 	@param full_path - the full path of the request
 	@return a JSON value returned by the request response
 */
-Json::Value RestSession::_putreq(std::string full_path)
+simdjson::dom::element RestSession::_putreq(std::string full_path)
 {
 	try
 	{
@@ -196,7 +199,7 @@ Json::Value RestSession::_putreq(std::string full_path)
 	@param full_path - the full path of the request
 	@return a JSON value returned by the request response
 */
-Json::Value RestSession::_deletereq(std::string full_path)
+simdjson::dom::element RestSession::_deletereq(std::string full_path)
 {
 	try
 	{
@@ -253,11 +256,8 @@ bool RestSession::close()
 	this class is used to handle request responses
 */
 RestSession::RequestHandler::RequestHandler()
-	: req_raw{ "" }, req_json{ Json::Value{} }, req_status{ CURLcode{} }, locker { nullptr }
+	: req_raw{ "" }, req_json{ simdjson::dom::element{} }, req_status{ CURLcode{} }, locker { nullptr }
 {
-	req_json["request_status"] = 0;
-	req_json["response"] = Json::arrayValue;
-
 };
 
 /**
